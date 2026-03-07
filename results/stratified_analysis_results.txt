@@ -1,0 +1,18 @@
+================================================================================
+ 層別解析結果
+================================================================================
+
+【greenspace_ratio_percentの係数（層別）】
+
+Urban                (N=24): beta=5205.7824, p=0.4574 
+Rural                (N=23): beta=-8415.5428, p=0.8053 
+High Aging           (N=24): beta=8185.5164, p=0.7091 
+Low Aging            (N=23): beta=7537.3990, p=0.2906 
+High Education       (N=24): beta=3065.7950, p=0.6294 
+Low Education        (N=23): beta=6465.5639, p=0.7100 
+
+【交互作用分析】
+greenspace_ratio_percent × aging_rate: beta=2075.0570, p=0.4318 
+greenspace_ratio_percent × single_household_rate: beta=-8.1209, p=0.6779 
+greenspace_ratio_percent × urban_indicator: beta=388.9788, p=0.9873 
+greenspace_ratio_percent × pop_density: beta=-0.0894, p=0.9863 

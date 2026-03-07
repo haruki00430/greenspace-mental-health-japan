@@ -62,6 +62,7 @@ data/interim/*.dbf
 data/interim/*.prj
 data/processed/*.csv
 data/processed/*.parquet
+data/processed/*.geojson
 
 # ただし、最終データセットのメタデータは含める
 !data/processed/README.md
