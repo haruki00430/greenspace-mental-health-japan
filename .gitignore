@@ -1,0 +1,110 @@
+# NDB_XXX_greenspace_mental_health .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 仮想環境
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 設定フォルダ（重要！）
+.antigravity/
+.claude/
+.cursor/
+.gemini/
+.obsidian/
+
+# データファイル（大容量のため除外）
+data/raw/
+data/interim/*.csv
+data/interim/*.parquet
+data/interim/*.geojson
+data/interim/*.shp
+data/interim/*.shx
+data/interim/*.dbf
+data/interim/*.prj
+data/processed/*.csv
+data/processed/*.parquet
+
+# ただし、最終データセットのメタデータは含める
+!data/processed/README.md
+!data/interim/README.md
+
+# 一時ファイル
+*.tmp
+*.bak
+*.log
+
+# 大容量図表（最終版のみコミット）
+results/figures/*.png
+results/figures/*.pdf
+results/figures/*.svg
+!results/figures/README.md
+
+# Excel一時ファイル
+~$*.xlsx
+~$*.xls
+
+# R関連（使用する場合）
+.RData
+.Rhistory
+.Rproj.user
+
+# Quarto
+.quarto/
+*_files/
+*.html
+*.docx
+*.pdf
+!04_Manuscripts/*.qmd
+
+# 圧縮ファイル
+*.zip
+*.tar.gz
+*.rar
+
+# セキュリティ（APIキーなど）
+.env
+secrets.yaml
+credentials.json
+
+# プロジェクト固有ディレクトリ
+01_Data/
+03_Analysis/
