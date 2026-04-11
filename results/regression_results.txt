@@ -1,0 +1,59 @@
+================================================================================
+ 空間回帰分析結果 (N=47都道府県)
+================================================================================
+
+【1. OLS回帰】
+
+R-squared: 0.5285
+Adjusted R-squared: 0.4710
+AIC: 1382.77
+Log-likelihood: -685.39
+
+係数推定値:
+  Intercept: -3471479.7418
+  greenspace_ratio_percent: β=1483.0263, SE=8091.8557, t=0.183, p=0.8555 
+  aging_rate: β=193620.5078, SE=43884.0051, t=4.412, p=0.0001 ***
+  unemployment_rate: β=401624.8739, SE=190545.2073, t=2.108, p=0.0412 *
+  income_per_capita: β=954.8694, SE=533.3974, t=1.790, p=0.0808 
+  psych_clinic_density: β=110166.1210, SE=55721.6272, t=1.977, p=0.0548 
+
+空間診断:
+  LM-Lag: 3.2830 (p=0.0700)
+  Robust LM-Lag: 5.4635 (p=0.0194)
+  LM-Error: 1.9391 (p=0.1638)
+  Robust LM-Error: 4.1196 (p=0.0424)
+
+【2. Spatial Lag Model (SLM)】
+
+Pseudo-R-squared: 0.5620
+AIC: 1381.44
+Log-likelihood: -683.72
+Spatial lag parameter (ρ): -0.1053
+
+係数推定値:
+  Intercept: -4317385.4138
+  greenspace_ratio_percent: β=-938.6013, z=-0.127, p=0.8991 
+  aging_rate: β=234089.3200, z=5.242, p=0.0000 ***
+  unemployment_rate: β=391187.5363, z=2.269, p=0.0233 *
+  income_per_capita: β=1254.1422, z=2.493, p=0.0127 *
+  psych_clinic_density: β=105705.7020, z=2.107, p=0.0351 *
+
+【4. Spatial Durbin Model (SDM)】
+
+Pseudo-R-squared: 0.7350
+AIC: 1368.48
+Log-likelihood: -672.24
+Spatial lag parameter (ρ): 0.2451
+
+係数推定値:
+  Intercept: -3044150.8634
+  greenspace_ratio_percent: β=1325.9704, z=0.207, p=0.8357 
+  aging_rate: β=235785.9297, z=6.209, p=0.0000 ***
+  unemployment_rate: β=32759.2363, z=0.198, p=0.8432 
+  income_per_capita: β=1561.0018, z=3.330, p=0.0009 ***
+  psych_clinic_density: β=167126.1055, z=3.529, p=0.0004 ***
+  W_greenspace_ratio_percent: β=15.7342, z=0.001, p=0.9989 
+  W_aging_rate: β=-55230.7352, z=-0.953, p=0.3407 
+  W_unemployment_rate: β=275626.6961, z=1.050, p=0.2935 
+  W_income_per_capita: β=-667.7946, z=-1.515, p=0.1298 
+  W_psych_clinic_density: β=-267081.5221, z=-3.021, p=0.0025 **

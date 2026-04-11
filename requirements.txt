@@ -1,0 +1,50 @@
+# NDB_XXX_greenspace_mental_health
+# 緑地環境と精神保健の空間疫学研究
+# Python 3.11以降推奨
+
+# データ処理
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0  # Excel読み込み用
+
+# 地理空間データ処理
+geopandas>=0.13.0
+shapely>=2.0.0
+fiona>=1.9.0
+pyproj>=3.5.0
+
+# 空間統計
+libpysal>=4.7.0  # 空間重み行列
+esda>=2.5.0      # 空間的自己相関（Moran's I）
+spreg>=1.3.0     # 空間回帰モデル（SLM, SEM）
+splot>=1.1.5     # 空間データ可視化
+
+# 統計解析
+scipy>=1.10.0
+statsmodels>=0.14.0
+scikit-learn>=1.3.0
+
+# 可視化
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+folium>=0.14.0   # インタラクティブ地図
+
+# データ取得
+requests>=2.31.0
+beautifulsoup4>=4.12.0  # Webスクレイピング（必要に応じて）
+
+# 設定ファイル
+pyyaml>=6.0
+
+# Jupyter環境（オプション）
+jupyter>=1.0.0
+notebook>=6.5.0
+ipykernel>=6.23.0
+
+# 論文執筆支援（オプション）
+# quarto-cli は別途インストールが必要
+# pip install quarto-cli
+
+# ユーティリティ
+tqdm>=4.65.0  # プログレスバー

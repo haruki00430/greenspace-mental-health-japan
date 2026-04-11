@@ -1,0 +1,334 @@
+# NDB_XXX_greenspace_mental_health プロジェクト設定ファイル
+# 緑地環境と精神保健の空間疫学研究
+
+project:
+  name: "NDB_XXX_greenspace_mental_health"
+  title: "緑地環境と精神科処方薬の地域分布に関する空間疫学研究：都市緑地の逆説（Urban Greenspace Paradox）の検証"
+  title_en: "The Urban Greenspace Paradox: An Ecological and Spatial Analysis of Natural Environments and Psychotropic Drug Prescriptions in Japan"
+  description: "二次医療圏単位の緑地率と精神科処方薬の関連を空間統計手法（SDM等）で解析し、逆説的偏在を検証する"
+  start_date: "2026-02-22"
+  target_completion: "2026-05-31"
+  principal_investigator: "TBD"
+
+research_design:
+  type: "横断的空間疫学研究"
+  study_design: "Ecological study with spatial analysis"
+  analysis_unit: "二次医療圏"
+  sample_size: 335  # 全国の二次医療圏数
+  study_period: "2020年度（令和2年度）"
+
+# データソース設定
+data_sources:
+  ndb:
+    version: "第10回NDBオープンデータ"
+    base_path: "../../02_Data/raw/NDB_OpenData/No.10/"
+    target_files:
+      prescriptions:
+        path: "05_処方薬/01_医科レセプト（電子レセプト）を用いた集計/01_処方薬（内服／外用／注射）/二次医療圏別数量.xlsx"
+        header_rows: [2, 3]  # MultiIndex
+      population:
+        path: "01_医療圏情報（人口）/二次医療圏別総人口・年齢階級別人口.csv"
+
+  gsi:  # 国土地理院
+    land_use:
+      name: "国土数値情報 土地利用細分メッシュ"
+      url: "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b.html"
+      format: "GML/Shapefile"
+      target_year: 2018
+    secondary_areas:
+      name: "国土数値情報 二次医療圏データ（A38）"
+      url: "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A38.html"
+      format: "GML/GeoJSON"
+      target_year: 2020
+
+  estat:
+    census:
+      name: "国勢調査・市町村税課税状況等の調（令和2年）"
+      variables:
+        - unemployment_rate
+        - income_per_capita
+        - single_household_rate
+        - aging_rate
+        - education_level
+    medical_facilities:
+      name: "医療施設調査・医師歯科医師薬剤師統計（令和2年）"
+      variables:
+        - psychiatric_clinics_per_100k
+        - psychiatric_doctors_per_100k
+
+  jma:  # 気象庁
+    climate:
+      name: "過去の気象データ"
+      url: "https://www.data.jma.go.jp/obd/stats/etrn/index.php"
+      variables:
+        - annual_sunshine_hours
+      target_year: 2020
+
+# 変数定義
+variables:
+  outcome:
+    name: "精神科処方薬処方量"
+    description: "年齢標準化後の人口10万人あたり処方数量（DDD換算）"
+    drug_classes:
+      antidepressants:
+        name: "抗うつ薬"
+        description: "SSRIs, SNRIs, その他抗うつ薬"
+        target_codes:
+          - "TBD"  # データ取得時に確定
+      anxiolytics:
+        name: "抗不安薬"
+        description: "ベンゾジアゼピン系等"
+        target_codes:
+          - "TBD"
+      hypnotics:
+        name: "睡眠薬"
+        description: "ベンゾジアゼピン系、非ベンゾ系睡眠薬"
+        target_codes:
+          - "TBD"
+    unit: "DDD/100,000 population"
+    standardization: "直接法（2020年二次医療圏人口を基準）"
+
+  exposure:
+    total_greenspace:
+      name: "total_greenspace_ratio"
+      description: "全体緑地率（%）"
+      definition: "(森林面積 + 公園面積) / 総面積 × 100"
+      data_source: "国土数値情報 土地利用細分メッシュ"
+    park:
+      name: "park_ratio"
+      description: "公園率（%）"
+      definition: "公園・緑地面積 / 総面積 × 100"
+      data_source: "国土数値情報 土地利用細分メッシュ"
+    forest:
+      name: "forest_ratio"
+      description: "森林率（%）"
+      definition: "森林面積 / 総面積 × 100"
+      data_source: "国土数値情報 土地利用細分メッシュ"
+
+  covariates:
+    - name: "aging_rate"
+      description: "高齢化率（65歳以上人口割合）"
+      source: "NDB人口データ / 国勢調査"
+
+    - name: "unemployment_rate"
+      description: "完全失業率（%）"
+      source: "国勢調査"
+
+    - name: "income_per_capita"
+      description: "1人あたり課税対象所得（万円）"
+      source: "e-Stat 市町村税課税状況等の調"
+
+    - name: "single_household_rate"
+      description: "単独世帯率（全単独世帯数 / 総世帯数）（%）"
+      source: "国勢調査"
+
+    - name: "psychiatric_clinic_density"
+      description: "精神科・心療内科診療所密度（/10万人）"
+      source: "医療施設調査"
+
+    - name: "psychiatric_doctor_density"
+      description: "精神科医師密度（/10万人）"
+      source: "医師歯科医師薬剤師統計"
+
+    - name: "annual_sunshine_hours"
+      description: "年間日照時間（時間）"
+      source: "気象庁"
+
+# 統計解析設定
+analysis:
+  spatial_analysis:
+    spatial_unit: "二次医療圏"
+    spatial_unit_code: "area_code"  # A38b_003（4桁コード）
+
+    spatial_weights:
+      type: "Queen contiguity"
+      row_standardization: true
+      island_handling: "KNN補完（k=1）"
+      expected_islands: 14  # 離島圏域の想定数
+
+    autocorrelation:
+      method: "Global Moran's I"
+      permutations: 999
+      significance_level: 0.05
+
+    regression_models:
+      - type: "OLS"
+        name: "通常最小二乗法"
+        purpose: "ベースラインモデル"
+
+      - type: "SLM"
+        name: "空間ラグモデル"
+        purpose: "空間依存性のモデル化（従属変数）"
+        estimation: "Maximum Likelihood"
+
+      - type: "SEM"
+        name: "空間誤差モデル"
+        purpose: "空間依存性のモデル化（誤差項）"
+        estimation: "Maximum Likelihood"
+
+      - type: "SDM"
+        name: "空間ダービンモデル"
+        purpose: "当該圏域および近隣圏域の独立変数（緑地・医療資源等）の影響と波及効果のモデル化"
+        estimation: "Maximum Likelihood"
+
+    model_selection:
+      criteria:
+        - "AIC"
+        - "BIC"
+        - "Log-likelihood"
+      diagnostics:
+        - "LM-Lag test"
+        - "LM-Error test"
+        - "Robust LM-Lag test"
+        - "Robust LM-Error test"
+
+  sensitivity_analysis:
+    interactions:
+      - "total_greenspace_ratio × single_household_rate"
+      - "total_greenspace_ratio × psychiatric_clinic_density"
+
+    stratification:
+      - variable: "population_density"
+        categories: ["Urban (top 1/3)", "Suburban (middle 1/3)", "Rural (bottom 1/3)"]
+
+      - variable: "aging_rate"
+        categories: ["Low (<25%)", "Medium (25-30%)", "High (>30%)"]
+
+    robustness:
+      - name: "外れ値除外"
+        method: "Cook's distance > 1"
+
+      - name: "対数変換"
+        target: "outcome variables"
+        purpose: "分布の歪み対応"
+
+      - name: "四分位カテゴリ化"
+        target: "total_greenspace_ratio"
+        purpose: "非線形関係の探索"
+      
+      - name: "緑地の質別解析"
+        target: "park_ratio, forest_ratio"
+        purpose: "都市公園と森林の効果の異質性確認"
+
+# 出力設定
+output:
+  data:
+    interim:
+      - "psychiatric_prescriptions.csv"
+      - "greenspace_ratio.csv"
+      - "socioeconomic_data.csv"
+      - "climate_data.csv"
+    processed:
+      - "analysis_dataset.csv"
+
+  figures:
+    format: ["png", "pdf"]
+    dpi: 300
+    font_family: "Meiryo"  # 日本語フォント
+    figures:
+      - "01_flowchart.png"
+      - "02_choropleth_greenspace.png"
+      - "03_choropleth_prescriptions.png"
+      - "04_local_morans_i.png"
+      - "05_scatterplot_greenspace_vs_prescriptions.png"
+      - "06_forest_plot_models.png"
+
+  tables:
+    format: ["csv", "tex", "docx"]
+    tables:
+      - "table1_descriptive_statistics.csv"
+      - "table2_spatial_regression_results.csv"
+      - "table3_sensitivity_analysis.csv"
+
+  reports:
+    - "docs/phase_summary_report.md"
+    - "docs/statistical_analysis_report.html"
+
+  manuscript:
+    format: ["html", "docx", "pdf"]
+    file: "04_Manuscripts/Manuscript_greenspace_mental_health.qmd"
+    bibliography: "references.bib"
+    csl: "vancouver.csl"
+
+# 投稿先ジャーナル設定
+target_journals:
+  primary:
+    - name: "Environmental Research"
+      impact_factor: 8.3
+      quartile: "Q1"
+      publisher: "Elsevier"
+
+    - name: "Health & Place"
+      impact_factor: 4.8
+      quartile: "Q1"
+      publisher: "Elsevier"
+
+    - name: "Preventive Medicine"
+      impact_factor: 4.4
+      quartile: "Q1"
+      publisher: "Elsevier"
+
+  secondary:
+    - name: "Journal of Epidemiology"
+      impact_factor: 3.0
+      quartile: "Q2"
+      publisher: "日本疫学会"
+
+    - name: "International Journal of Environmental Research and Public Health"
+      impact_factor: 4.6
+      quartile: "Q2"
+      publisher: "MDPI"
+      open_access: true
+
+# プロジェクト管理
+project_management:
+  phases:
+    phase1:
+      name: "データ収集・前処理"
+      duration: "2週間"
+      status: "準備中"
+
+    phase2:
+      name: "記述統計・空間探索的分析"
+      duration: "1週間"
+      status: "未着手"
+
+    phase3:
+      name: "空間回帰分析"
+      duration: "2週間"
+      status: "未着手"
+
+    phase4:
+      name: "感度分析・交互作用検討"
+      duration: "1週間"
+      status: "未着手"
+
+    phase5:
+      name: "可視化・結果まとめ"
+      duration: "1週間"
+      status: "未着手"
+
+    phase6:
+      name: "論文執筆"
+      duration: "3週間"
+      status: "未着手"
+
+  milestones:
+    - date: "2026-03-08"
+      event: "Phase 1完了（データセット完成）"
+
+    - date: "2026-03-22"
+      event: "Phase 3完了（空間回帰分析完了）"
+
+    - date: "2026-04-12"
+      event: "Phase 5完了（全図表完成）"
+
+    - date: "2026-05-31"
+      event: "論文投稿"
+
+# メタ情報
+meta:
+  version: "1.0"
+  created: "2026-02-22"
+  last_updated: "2026-02-22"
+  config_schema: "NDB_Research_Hub v1.0"

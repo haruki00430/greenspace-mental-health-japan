@@ -1,0 +1,173 @@
+@article{markevych2017,
+  title={Exploring pathways linking greenspace to health: Theoretical and methodological guidance},
+  author={Markevych, Iana and Schoierer, Julia and Hartig, Terry and Chudnovsky, Alexandra and Hystad, Perry and Dzhambov, Angel M and de Vries, Sjerp and Triguero-Mas, Margarita and Brauer, Michael and Nieuwenhuijsen, Mark J and others},
+  journal={Environmental Research},
+  volume={158},
+  pages={301--317},
+  year={2017},
+  publisher={Elsevier}
+}
+
+@article{gascon2015,
+  title={Mental health benefits of long-term exposure to residential green and blue spaces: a systematic review},
+  author={Gascon, Mireia and Triguero-Mas, Margarita and Mart{\'\i}nez, David and Dadvand, Payam and Forns, Joan and Plas{\`e}ncia, Antoni and Nieuwenhuijsen, Mark J},
+  journal={International Journal of Environmental Research and Public Health},
+  volume={12},
+  number={4},
+  pages={4354--4379},
+  year={2015},
+  publisher={MDPI}
+}
+
+@article{vandenbosch2018,
+  title={Urban natural environments as nature-based solutions for improved public health--A systematic review of reviews},
+  author={Van den Bosch, Matilda and Ode Sang, {\AA}sa},
+  journal={Environmental Research},
+  volume={158},
+  pages={373--384},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{hartig2014,
+  title={Nature and health},
+  author={Hartig, Terry and Mitchell, Richard and De Vries, Sjerp and Frumkin, Howard},
+  journal={Annual Review of Public Health},
+  volume={35},
+  pages={207--228},
+  year={2014},
+  publisher={Annual Reviews}
+}
+
+@techreport{who2016,
+  title={Urban green spaces and health},
+  author={{World Health Organization}},
+  year={2016},
+  institution={WHO Regional Office for Europe},
+  address={Copenhagen}
+}
+
+@misc{ministry2020,
+  title={Patient Survey 2020},
+  author={{Ministry of Health, Labour and Welfare}},
+  year={2020},
+  howpublished={\url{https://www.mhlw.go.jp/toukei/list/10-20.html}},
+  note={Accessed: 2024-01-15}
+}
+
+@article{lee2015,
+  title={The health benefits of urban green spaces: a review of the evidence},
+  author={Lee, Anna CK and Maheswaran, Ravi},
+  journal={Journal of Public Health},
+  volume={33},
+  number={2},
+  pages={212--222},
+  year={2011},
+  publisher={Oxford University Press}
+}
+
+@article{mitchell2013,
+  title={Neighborhood environments and socioeconomic inequalities in mental well-being},
+  author={Mitchell, Richard and Popham, Frank},
+  journal={American Journal of Preventive Medicine},
+  volume={49},
+  number={1},
+  pages={80--84},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@misc{mhlw2022,
+  title={NDB Open Data No.10},
+  author={{Ministry of Health, Labour and Welfare}},
+  year={2022},
+  howpublished={\url{https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html}},
+  note={Accessed: 2024-01-15}
+}
+
+@misc{biodiversity2022,
+  title={National Survey on the Natural Environment},
+  author={{Biodiversity Center of Japan}},
+  year={2022},
+  howpublished={\url{http://www.biodic.go.jp/}},
+  note={Accessed: 2024-01-15}
+}
+
+@misc{estat2022,
+  title={e-Stat: Portal Site of Official Statistics of Japan},
+  author={{Statistics Bureau of Japan}},
+  year={2022},
+  howpublished={\url{https://www.e-stat.go.jp/}},
+  note={Accessed: 2024-01-15}
+}
+
+@article{maas2009,
+  title={Morbidity is related to a green living environment},
+  author={Maas, Jolanda and Verheij, Robert A and de Vries, Sjerp and Spreeuwenberg, Peter and Schellevis, Fran{\c{c}}ois G and Groenewegen, Peter P},
+  journal={Journal of Epidemiology \& Community Health},
+  volume={63},
+  number={12},
+  pages={967--973},
+  year={2009},
+  publisher={BMJ Publishing Group Ltd}
+}
+
+@article{mitchell2015,
+  title={Effect of exposure to natural environment on health inequalities: an observational population study},
+  author={Mitchell, Richard J and Richardson, Elizabeth A and Shortt, Niamh K and Pearce, Jamie R},
+  journal={The Lancet},
+  volume={372},
+  number={9650},
+  pages={1655--1660},
+  year={2008},
+  publisher={Elsevier}
+}
+
+@article{anselin1988,
+  title={Spatial econometrics: methods and models},
+  author={Anselin, Luc},
+  journal={Studies in Operational Regional Science},
+  year={1988},
+  publisher={Springer Science \& Business Media}
+}
+
+@article{helbich2018,
+  title={Using deep learning to examine street view green and blue spaces and their associations with geriatric depression in Beijing, China},
+  author={Helbich, Marco and Yao, Yao and Liu, Ye and Zhang, Jianqiang and Liu, Peng and Wang, Rongkang},
+  journal={Environment International},
+  volume={126},
+  pages={107--117},
+  year={2019},
+  publisher={Elsevier}
+}
+
+@article{lu2018,
+  title={The effect of street-level greenery on walking behavior: Evidence from Hong Kong},
+  author={Lu, Yi and Sarkar, Chinmoy and Xiao, Yang},
+  journal={Social Science \& Medicine},
+  volume={208},
+  pages={41--49},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{tsai2019,
+  title={Relationships between characteristics of urban green land cover and mental health in U.S. metropolitan areas},
+  author={Tsai, Wei-Lun and McHale, Melissa R and Jennings, Viniece and Marquet, Oriol and Hipp, J Aaron and Leung, Yu-Fai and Floyd, Myron F},
+  journal={International Journal of Environmental Research and Public Health},
+  volume={15},
+  number={2},
+  pages={340},
+  year={2018},
+  publisher={MDPI}
+}
+
+@article{yang2020,
+  title={Urban greenery and mental health in Chinese cities},
+  author={Yang, Bo-Yi and Markevych, Iana and Bloom, Michael S and Heinrich, Joachim and Guo, Yuming and Morawska, Lidia and Dharmage, Shyamali C and Knibbs, Luke D and Lin, Shaowei and Yim, Steve HL and others},
+  journal={Environmental Research},
+  volume={182},
+  pages={109104},
+  year={2020},
+  publisher={Elsevier}
+}

@@ -1,0 +1,23 @@
+﻿commit 44eee7cc483449e761615b53b67656419400b184
+Author: haruki00430 <haruki00430@gmail.com>
+Date:   Sat Mar 7 14:21:10 2026 +0900
+
+    霑ｽ蜉蛻・ｒ繧ｳ繝溘ャ繝医＠縺ｾ縺吶・
+README.md
+config/config.yaml
+data/processed/spatial_analysis_data.geojson
+docs/DATA_LOCATIONS.md
+docs/existing_data_assessment.md
+docs/prescription_rate_correction_report.md
+docs/progress_report.md
+docs/research_protocol.md
+docs/research_protocol_review.md
+docs/research_protocol_v2_summary.md
+requirements.txt
+results/correlation_matrix.csv
+results/descriptive_stats.txt
+results/model_comparison.csv
+results/morans_i_results.txt
+results/regression_results.txt
+results/sensitivity_analysis_results.txt
+results/stratified_analysis_results.txt
