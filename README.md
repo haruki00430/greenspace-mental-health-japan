@@ -1,3 +1,5 @@
+﻿> **正本リポジトリ（GitHub Private）：** https://github.com/haruki00430/NDB_XXX_greenspace_mental_health
+
 # NDB_XXX_greenspace_mental_health
 
 **緑地環境と精神保健の空間疫学研究**
