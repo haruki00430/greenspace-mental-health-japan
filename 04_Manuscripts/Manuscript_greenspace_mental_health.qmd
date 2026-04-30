@@ -17,8 +17,8 @@ format:
   docx:
     toc: false
     number-sections: false
-bibliography: references.bib
-csl: vancouver.csl
+bibliography: ../references.bib
+csl: ../vancouver.csl
 ---
 
 ---
