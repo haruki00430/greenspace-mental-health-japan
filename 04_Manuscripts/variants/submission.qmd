@@ -1,0 +1,17 @@
+---
+title: "Urban-Rural Heterogeneity in the Association Between Greenspace and Psychiatric Medication Prescriptions: A Spatial Ecological Study of 47 Japanese Prefectures"
+format:
+  docx:
+    toc: false
+    number-sections: false
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+bibliography: ../references.bib
+csl: ../vancouver.csl
+---
+
+{{< include ../core/manuscript_core.qmd >}}
+
+{{< include ../includes/submission_journal_notes.qmd >}}
