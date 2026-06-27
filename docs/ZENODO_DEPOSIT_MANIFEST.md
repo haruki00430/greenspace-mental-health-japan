@@ -111,7 +111,7 @@ After DOI is confirmed, update `04_Manuscripts/Manuscript_CMHJ.qmd` § Availabil
 
 ```
 The analysis code and prefecture-level aggregate data (N = 47) are openly
-available at https://doi.org/10.5281/zenodo.XXXXXXX (replace with actual DOI).
+available at https://doi.org/10.5281/zenodo.20950807.
 ```
 
 Then re-render and submit final DOCX to the journal.

@@ -142,13 +142,14 @@ Requires Quarto and `apa.csl` (included in repository).
 
 ## Zenodo ↔ GitHub release workflow / リリース手順
 
+**Current release (2026-06-27):** `v1.0.1` → DOI [`10.5281/zenodo.20950807`](https://doi.org/10.5281/zenodo.20950807)
+
 1. Ensure no secrets or raw NDB data in repository (`git status --short`)
-2. Tag `v1.0.0` on GitHub after acceptance notification
-3. Enable **Zenodo–GitHub integration** for `haruki00430/greenspace-mental-health-japan`
-4. Create GitHub Release → Zenodo auto-archives and issues DOI
-5. Edit Zenodo metadata per `docs/ZENODO_DEPOSIT_MANIFEST.md`
-6. Replace `XXXXXXX` in `CITATION.cff` and `04_Manuscripts/Manuscript_CMHJ.qmd` § Data availability
-7. Re-render `Manuscript_CMHJ.qmd` with updated DOI and submit final version to journal
+2. Enable **Zenodo–GitHub integration** for `haruki00430/greenspace-mental-health-japan`
+3. Create GitHub Release → Zenodo auto-archives and issues DOI
+4. Edit Zenodo metadata per `docs/ZENODO_DEPOSIT_MANIFEST.md`
+5. Update `CITATION.cff`, `README.md`, and `04_Manuscripts/Manuscript_CMHJ.qmd` § Data availability
+6. Re-render `Manuscript_CMHJ.qmd` and refresh `submission_package_CMHJ/` DOCX files
 
 ---
 

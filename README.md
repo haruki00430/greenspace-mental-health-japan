@@ -166,7 +166,7 @@ Mental Health Service Use in Japan. Community Mental Health Journal. [Submitted 
 ```
 
 Or use the Zenodo DOI (see [`CITATION.cff`](CITATION.cff)):  
-`https://doi.org/10.5281/zenodo.XXXXXXX` (replace with actual DOI after acceptance)
+`https://doi.org/10.5281/zenodo.20950807`
 
 ---
 
