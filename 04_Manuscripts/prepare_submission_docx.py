@@ -15,8 +15,8 @@ APA_OUT = PKG / "Manuscript_CMHJ_APA_20260627.docx"
 BLIND_OUT = PKG / "Manuscript_CMHJ_blinded_20260627.docx"
 
 
-def clear_docx_metadata(path: Path) -> None:
-    """Word コアメタデータから著者情報を削除する。"""
+def sanitize_docx_package(path: Path) -> None:
+    """Word コアメタデータの削除と comments.xml の除去（ドキュメントの検査相当）。"""
     with zipfile.ZipFile(path, "r") as zin:
         names = zin.namelist()
         files = {name: zin.read(name) for name in names}
@@ -26,11 +26,35 @@ def clear_docx_metadata(path: Path) -> None:
         core = re.sub(rf"<{tag}[^>]*>.*?</{tag}>", f"<{tag}/>", core, flags=re.DOTALL)
     files["docProps/core.xml"] = core.encode("utf-8")
 
+    drop = {
+        "word/comments.xml",
+        "word/commentsExtended.xml",
+        "word/_rels/comments.xml.rels",
+    }
+    names = [n for n in names if n not in drop]
+    files = {k: v for k, v in files.items() if k not in drop}
+
+    # document.xml.rels から comments 参照を除去
+    rels_key = "word/_rels/document.xml.rels"
+    if rels_key in files:
+        rels = files[rels_key].decode("utf-8")
+        rels = re.sub(
+            r'<Relationship[^>]*Type="[^"]*/comments"[^>]*/>\s*',
+            "",
+            rels,
+        )
+        files[rels_key] = rels.encode("utf-8")
+
     tmp = path.with_suffix(".tmp.docx")
     with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
         for name in names:
             zout.writestr(name, files[name])
     tmp.replace(path)
+
+
+def clear_docx_metadata(path: Path) -> None:
+    """後方互換のエイリアス。"""
+    sanitize_docx_package(path)
 
 
 def anonymize_credits(doc: Document) -> None:
