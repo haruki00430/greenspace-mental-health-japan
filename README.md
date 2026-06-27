@@ -96,7 +96,7 @@ NDB_XXX_greenspace_mental_health/
 
 ## Requirements
 
-Python 3.11+ is recommended.
+Python 3.14 is used in the development environment (`requirements.txt`).
 
 ```bash
 # Create virtual environment

@@ -29,7 +29,7 @@ Prefecture-level values in `data/processed/` are derived from publicly available
 
 | Item | Requirement |
 |------|-------------|
-| Python | 3.10 or later (3.11+ tested on Windows) |
+| Python | 3.14 (tested on Windows); dependencies in `requirements.txt` |
 | OS | Windows 10/11, macOS 12+, Ubuntu 20.04+ |
 | RAM | 8 GB minimum (16 GB if rebuilding greenspace from mesh data) |
 | Disk | ~3 GB for NDB Excel + interim files; >10 GB if rebuilding greenspace pipeline |

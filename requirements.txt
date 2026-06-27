@@ -1,6 +1,6 @@
 # NDB_XXX_greenspace_mental_health
 # 緑地環境と精神保健の空間疫学研究
-# Python 3.11以降推奨
+# Python 3.14（開発・検証環境）
 
 # データ処理
 pandas>=2.0.0

@@ -115,7 +115,7 @@ To examine urban-rural heterogeneity, we conducted stratified analyses by dividi
 
 We conducted two sensitivity analyses: (1) outlier diagnostics using Cook's distance and standardized residuals; (2) exclusion of island prefectures (Hokkaido and Okinawa) to assess robustness.
 
-All analyses were performed using Python 3.11 with the `libpysal`, `spreg`, `geopandas`, and `matplotlib` libraries. Statistical significance was set at α=0.05 (two-tailed).
+All analyses were performed using Python 3.14 with the `libpysal`, `spreg`, `geopandas`, and `matplotlib` libraries. Statistical significance was set at α=0.05 (two-tailed).
 
 *Use of AI tools: During analysis scripting and manuscript preparation, the authors used AI-assisted coding tools (Cursor, Claude Code). All statistical analyses were implemented and verified by the authors; NDB raw data were not transmitted to AI systems. See Declarations for full AI disclosure.*
 
