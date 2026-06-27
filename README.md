@@ -27,9 +27,9 @@ We examined whether **prefecture-level greenspace coverage** predicts **psychiat
 
 | Model | AIC | Pseudo-R² | Greenspace β (p) |
 |-------|-----|-----------|-----------------|
-| OLS | 1395.34 | 0.581 | 3,050 (p = 0.610) |
-| Spatial Lag Model | 1369.05 | 0.720 | 3,075 (p = 0.492) |
-| Spatial Error Model | 1374.91 | 0.702 | 2,660 (p = 0.583) |
+| OLS | 1382.77 | 0.529 | 1,483 (p = 0.856) |
+| Spatial Lag Model | 1381.44 | 0.562 | −939 (p = 0.899) |
+| Spatial Error Model | 1379.61 | 0.493 | — |
 | **Spatial Durbin Model** | **1368.48** | **0.735** | **1,326 (p = 0.836)** |
 
 - Global Moran's I: Greenspace ratio = 0.270 (p = 0.006); Prescription rate = 0.349 (p = 0.001)

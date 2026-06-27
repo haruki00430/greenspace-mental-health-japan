@@ -11,7 +11,7 @@ Attribution should cite:
   2. The GitHub repository: https://github.com/haruki00430/greenspace-mental-health-japan
   3. The underlying primary sources listed in DATA_SOURCES.md:
      - MHLW NDB Open Data (prescription rates)
-     - Biodiversity Center of Japan / MLIT (greenspace ratios)
+     - MLIT National Land Numerical Information (greenspace ratios)
      - e-Stat Statistics Bureau of Japan (socioeconomic covariates)
 
 Raw NDB Excel files are not redistributed and remain subject to MHLW terms.

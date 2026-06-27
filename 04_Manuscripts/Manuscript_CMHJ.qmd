@@ -65,18 +65,20 @@ Prescription data were obtained from the National Database of Health Insurance C
 
 ### Greenspace Ratio
 
-Greenspace data were obtained from the Biodiversity Center of Japan's National Survey on the Natural Environment (6th–7th surveys) [@ShengWuDuoYangXingsentaHuanJingShengZiRanHuanJingJu]. We defined greenspace as the sum of forest area and park area (km²) divided by total prefecture area (km²), expressed as a percentage. This variable was treated as an administrative environmental proxy: it captures quantity, but not accessibility, quality, safety, biodiversity, perceived restorative value, or actual use.
+Greenspace data were obtained from the National Land Numerical Information land-use subdivided mesh dataset (L03-b) published by the Ministry of Land, Infrastructure, Transport and Tourism [@mlitL03bLandUse]. Prefecture-level forest and park areas were aggregated from 1-km mesh cells and divided by total prefecture area (km²), expressed as a percentage. Forest area included the forest land-use class; park area included parks and green space. This variable was treated as an administrative environmental proxy: it captures quantity, but not accessibility, quality, safety, biodiversity, perceived restorative value, or actual use.
 
-### Socioeconomic Covariates
+### Socioeconomic and Healthcare Covariates
 
-Socioeconomic indicators were obtained from the e-Stat portal (Statistics Bureau of Japan) [@HuanZheDiaoCha]:
+Covariates were obtained from the e-Stat portal (Statistics Bureau of Japan) [@HuanZheDiaoCha] and the Ministry of Health, Labour and Welfare medical facility survey:
 
 - **Aging rate (%)**: Proportion of population aged ≥65 years (Population Census 2020)
+- **Unemployment rate (%)**: Complete unemployment rate (Population Census 2020)
 - **Population density (persons/km²)**: Total population divided by habitable land area
-- **Income per capita (JPY)**: Average annual income per capita (Basic Survey on Wage Structure 2020)
+- **Income per capita (JPY)**: Per-capita taxable income (Municipal Taxation Statistics, FY 2020)
 - **College graduate rate (%)**: Proportion of population aged ≥25 years with a college degree or higher (Employment Status Survey 2017)
+- **Psychiatric clinic density**: Number of psychiatric clinics per 100,000 population (Medical Facility Survey 2020)
 
-These variables were selected *a priori* as potential confounders based on previous literature documenting associations between socioeconomic status and both greenspace availability and mental health outcomes [@maasMorbidityRelatedGreen2009; @mitchellEffectExposureNatural2008].
+These variables were selected *a priori* as potential confounders based on previous literature documenting associations between socioeconomic status, healthcare access, and both greenspace availability and mental health outcomes [@maasMorbidityRelatedGreen2009; @mitchellEffectExposureNatural2008].
 
 ## 3. Statistical Analysis
 
@@ -113,7 +115,7 @@ To examine urban-rural heterogeneity, we conducted stratified analyses by dividi
 
 We conducted two sensitivity analyses: (1) outlier diagnostics using Cook's distance and standardized residuals; (2) exclusion of island prefectures (Hokkaido and Okinawa) to assess robustness.
 
-All analyses were performed using Python 3.14 with the `libpysal`, `spreg`, `geopandas`, and `matplotlib` libraries. Statistical significance was set at α=0.05 (two-tailed).
+All analyses were performed using Python 3.11 with the `libpysal`, `spreg`, `geopandas`, and `matplotlib` libraries. Statistical significance was set at α=0.05 (two-tailed).
 
 *Use of AI tools: During analysis scripting and manuscript preparation, the authors used AI-assisted coding tools (Cursor, Claude Code). All statistical analyses were implemented and verified by the authors; NDB raw data were not transmitted to AI systems. See Declarations for full AI disclosure.*
 
@@ -207,7 +209,7 @@ In this nationwide spatial ecological study, prefecture-level greenspace quantit
 
 ## Ethics Approval and Consent to Participate
 
-This study used publicly available, anonymized, aggregate-level data from government statistical databases, including the NDB Open Data (Ministry of Health, Labour and Welfare of Japan), the National Survey on the Natural Environment (Biodiversity Center of Japan), and e-Stat (Statistics Bureau of Japan). No individual-level data were accessed. Under applicable Japanese national guidelines, formal ethics committee review is not required for secondary research using publicly available aggregate statistics. No informed consent was required.
+This study used publicly available, anonymized, aggregate-level data from government statistical databases, including the NDB Open Data (Ministry of Health, Labour and Welfare of Japan), the National Land Numerical Information land-use dataset (Ministry of Land, Infrastructure, Transport and Tourism), and e-Stat (Statistics Bureau of Japan). No individual-level data were accessed. Under applicable Japanese national guidelines, formal ethics committee review is not required for secondary research using publicly available aggregate statistics. No informed consent was required.
 
 ## Consent for Publication
 
@@ -215,7 +217,7 @@ Not applicable.
 
 ## Availability of Data and Materials
 
-All data used in this study are publicly available. NDB Open Data (Ministry of Health, Labour and Welfare): <https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html>. Biodiversity Center of Japan: <http://www.biodic.go.jp/>. e-Stat (Statistics Bureau of Japan): <https://www.e-stat.go.jp/>. Analysis code and aggregate prefecture-level data (N = 47) will be made publicly available via GitHub and Zenodo (with a persistent DOI) upon acceptance.
+All data used in this study are publicly available. NDB Open Data (Ministry of Health, Labour and Welfare): <https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html>. National Land Numerical Information L03-b land-use data (Ministry of Land, Infrastructure, Transport and Tourism): <https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b.html>. e-Stat (Statistics Bureau of Japan): <https://www.e-stat.go.jp/>. Analysis code and aggregate prefecture-level data (N = 47) are available at <https://github.com/haruki00430/greenspace-mental-health-japan> and will receive a persistent Zenodo DOI upon acceptance.
 
 ## Competing Interests
 
@@ -227,15 +229,15 @@ This research received no specific grant from any funding agency in the public, 
 
 ## Authors' Contributions
 
-<!-- 投稿時に実名を記入 -->
-[Author 1]: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Visualization, Writing – original draft, Writing – review and editing.
-[Author 2]: Conceptualization, Supervision, Writing – review and editing.
+Author 1: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Visualization, Writing – original draft, Writing – review and editing.
+
+Author 2: Conceptualization, Supervision, Writing – review and editing.
 
 All authors read and approved the final manuscript.
 
 ## Acknowledgements
 
-We thank the Ministry of Health, Labour and Welfare for providing access to the National Database of Health Insurance Claims (NDB) Open Data, and the Biodiversity Center of Japan for providing greenspace data.
+We thank the Ministry of Health, Labour and Welfare for providing access to the National Database of Health Insurance Claims (NDB) Open Data, and the Ministry of Land, Infrastructure, Transport and Tourism for providing land-use data used to construct greenspace indicators.
 
 ---
 

@@ -17,8 +17,8 @@ This guide describes how to reproduce the **prefecture-level aggregated analysis
 | Analysis scripts (`03_Analysis/scripts/`) | NDB raw Excel (MHLW portal) |
 | Figures (`results/figures/`) | Large land-use mesh ZIP archives (MLIT) |
 | Model result summaries (`results/`) | Individual-level claims |
-| `data/processed/spatial_analysis_data.geojson` (N = 47) | Files > 100 MB (GitHub limit) |
-| `REPRODUCE.md`, `DATA_SOURCES.md` | |
+| `data/processed/analysis_dataset.csv` (N = 47) | Files > 100 MB (GitHub limit) |
+| `REPRODUCE.md`, `DATA_SOURCES.md` | `data/processed/spatial_analysis_data.geojson` (>100 MB; Zenodo/local only) |
 
 Under MHLW rules, **individual-level claims cannot be redistributed.**  
 Prefecture-level values in `data/processed/` are derived from publicly available open data only.
