@@ -3,7 +3,7 @@
 **Project:** `greenspace-mental-health-japan`  
 **Manuscript:** *Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan*  
 **Repository:** https://github.com/haruki00430/greenspace-mental-health-japan  
-**Archive DOI:** `10.5281/zenodo.20950807` — https://doi.org/10.5281/zenodo.20950807
+**Archive DOI:** `10.5281/zenodo.20951145` — https://doi.org/10.5281/zenodo.20951145
 
 This guide describes how to reproduce the **prefecture-level aggregated analysis (N = 47)** reported in the manuscript.  
 本書は論文に報告した **47都道府県の集計解析** を再現する手順です。
@@ -142,7 +142,7 @@ Requires Quarto and `apa.csl` (included in repository).
 
 ## Zenodo ↔ GitHub release workflow / リリース手順
 
-**Current release (2026-06-27):** `v1.0.1` → DOI [`10.5281/zenodo.20950807`](https://doi.org/10.5281/zenodo.20950807)
+**Current release (2026-06-27):** `v1.0.2` → DOI [`10.5281/zenodo.20951145`](https://doi.org/10.5281/zenodo.20951145)
 
 1. Ensure no secrets or raw NDB data in repository (`git status --short`)
 2. Enable **Zenodo–GitHub integration** for `haruki00430/greenspace-mental-health-japan`
