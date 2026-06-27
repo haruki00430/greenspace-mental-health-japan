@@ -3,7 +3,7 @@
 **Project:** `greenspace-mental-health-japan`  
 **Manuscript:** *Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan*  
 **Repository:** https://github.com/haruki00430/greenspace-mental-health-japan  
-**Archive DOI:** `10.5281/zenodo.XXXXXXX` — replace with actual DOI at release.
+**Archive DOI:** `10.5281/zenodo.20950807` — https://doi.org/10.5281/zenodo.20950807
 
 This guide describes how to reproduce the **prefecture-level aggregated analysis (N = 47)** reported in the manuscript.  
 本書は論文に報告した **47都道府県の集計解析** を再現する手順です。

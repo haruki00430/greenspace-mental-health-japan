@@ -5,7 +5,7 @@
 > **Reproduce · Public-data only:** [`REPRODUCE.md`](REPRODUCE.md) · [`DATA_SOURCES.md`](DATA_SOURCES.md) · [`03_Analysis/scripts/README.md`](03_Analysis/scripts/README.md) · [`docs/ZENODO_DEPOSIT_MANIFEST.md`](docs/ZENODO_DEPOSIT_MANIFEST.md) · [`CITATION.cff`](CITATION.cff)
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20950807.svg)](https://doi.org/10.5281/zenodo.20950807)
 
 > **日本語概要は下部の「概要（日本語）」セクションを参照してください。**
 

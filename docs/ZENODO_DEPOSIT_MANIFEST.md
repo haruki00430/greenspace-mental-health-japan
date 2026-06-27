@@ -1,8 +1,8 @@
 # Zenodo Deposit Manifest (v1.0.0)
 
 **Record type:** Software + dataset (prefecture-level aggregate, N = 47)  
-**GitHub tag:** `v1.0.0` (create after manuscript acceptance)  
-**DOI:** `10.5281/zenodo.XXXXXXX` — reserve DOI early; replace before submission  
+**DOI:** `10.5281/zenodo.20950807` (version); concept DOI `10.5281/zenodo.20950806`  
+**GitHub tag:** `v1.0.1` (Zenodo archival release, 2026-06-27)  
 **License:** Code CC-BY 4.0; data CC-BY 4.0 (derived prefecture-level aggregates only)
 
 ---
