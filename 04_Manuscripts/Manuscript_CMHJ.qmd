@@ -16,12 +16,6 @@ bibliography: references.bib
 csl: apa.csl
 ---
 
-<!-- ⚠️ 注意: apa.csl が必要です。
-     https://www.zotero.org/styles/apa からダウンロードし、
-     04_Manuscripts/ に配置してください。
-     また、references.bib に新規エントリ（references_addendum.bib 参照）の追加が必要です。 -->
-
----
 
 # Abstract
 
