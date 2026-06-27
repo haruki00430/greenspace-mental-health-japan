@@ -1,20 +1,24 @@
 # -*- coding: utf-8 -*-
 """
+Script 05: Merge Final Analysis Dataset
+========================================
+Joins prescription data, greenspace ratios, and socioeconomic covariates
+by prefecture code to create the final analysis dataset (N = 47 prefectures).
+Applies KNN imputation for missing values where applicable.
+
+Inputs:
+  - data/interim/psychiatric_prescriptions.csv  (from Script 02)
+  - data/interim/greenspace_ratio.csv           (from Script 03)
+  - data/interim/socioeconomic_data.csv         (from Script 04)
+
+Outputs:
+  - data/processed/analysis_dataset.csv         (N = 47 × ~15 variables)
+  - data/processed/analysis_dataset_per100k.csv (normalized per 100,000 pop)
+
+------------------------------------------------------------
 最終データセット統合スクリプト
-
-機能:
-1. 処方薬データ、緑地率データ、調整変数データを読み込み
-2. 都道府県コードで結合
-3. 欠損値処理（KNN補完または多重代入）
-4. 最終解析用データセットを保存
-
-入力:
-- data/interim/psychiatric_prescriptions.csv
-- data/interim/greenspace_ratio.csv
-- data/interim/socioeconomic_data.csv
-
-出力:
-- data/processed/analysis_dataset.csv（N=47都道府県×約15変数）
+処方薬・緑地率・調整変数を都道府県コードで結合し、解析データセットを生成
+------------------------------------------------------------
 """
 
 import pandas as pd

@@ -1,10 +1,16 @@
-# NDB 単体プロジェクト用（Hub ルート .gitignore と整合）
+# NDB_XXX_greenspace_mental_health — .gitignore
+# Updated 2026-06-27
+
+# ===== AI / IDE 設定フォルダ =====
 .antigravity/
+.claude/
 .cursor/
 .gemini/
 .obsidian/
+.serena/
 .vscode/
 
+# ===== Python =====
 __pycache__/
 *.py[cod]
 *$py.class
@@ -16,33 +22,59 @@ ENV/
 *.egg-info/
 .claude/settings.local.json
 
+# ===== NDB 生データ（絶対除外） =====
+data/raw/
 02_Data/raw/
-02_Data/processed/
-*.csv
-*.xlsx
+
+# ===== 中間処理ファイル（再生成可能）=====
+data/interim/*.parquet
+data/interim/*.db
+data/interim/*.sqlite
+
+# ===== 大容量バイナリ（GitHub 100MB 制限） =====
 *.parquet
 *.sqlite
 *.db
+*.xlsx
+# *.csv は results/ の集計ファイルを公開するため除外しない
 
-*.log
-05_Outputs/figures/
-05_Outputs/reports/
-
-.DS_Store
-Thumbs.db
-desktop.ini
-
-.git.disabled_*/
-**/.git.nested_repo_backup/
-.serena/
-.env.temp
-nul
-
-03_Analysis/**/logs/*.log
-
-# GitHub 単一ファイル 100MB 制限（大きいジオデータは LFS かローカルのみ）
-*.geojson
+# ===== 地理空間データ（大容量のため除外）=====
+# 注意: data/processed/spatial_analysis_data.geojson はすでにコミット済み
+data/raw/*.geojson
+data/interim/*.geojson
 *.shp
 *.dbf
 *.shx
 *.prj
+
+# ===== ログ =====
+*.log
+03_Analysis/**/logs/*.log
+
+# ===== 論文投稿パッケージ（著者情報・匿名版DOCX含む）=====
+04_Manuscripts/submission_package_CMHJ/
+04_Manuscripts/*.docx
+04_Manuscripts/replace_figures_in_docx.py
+# 投稿前ドラフト（執筆履歴）
+04_Manuscripts/Not_All_Environmental_Indicators_Travel_*.docx
+04_Manuscripts/*enriched*.docx
+
+# ===== デバッグ・一時ファイル =====
+git_names.txt
+git_push_error.txt
+
+# ===== 旧パス（後方互換） =====
+02_Data/processed/
+05_Outputs/figures/
+05_Outputs/reports/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== その他 =====
+.git.disabled_*/
+**/.git.nested_repo_backup/
+.env.temp
+nul

@@ -1,20 +1,26 @@
 # -*- coding: utf-8 -*-
 """
+Script 02: Extract NDB Psychiatric Prescription Data
+=====================================================
+Reads NDB Open Data prescription Excel files (outpatient / inpatient),
+filters for psychiatric drug categories (hypnotics/anxiolytics,
+psychotropics), and computes age-standardized rates per 100,000 population
+for each of the 47 Japanese prefectures.
+
+Inputs:
+  - NDB Open Data No.10: 05_処方薬 / 【内服】外来（院外/院内）_都道府県別薬効分類別数量.xlsx
+  - data/interim/psychiatric_drug_codes.csv  (from Script 01)
+
+Outputs:
+  - data/interim/psychiatric_prescriptions.csv  (N = 47 prefectures)
+
+NOTE: NDB raw Excel files are NOT included in this repository.
+Download from: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html
+
+------------------------------------------------------------
 NDB処方薬データ抽出スクリプト
-
-機能:
-1. NDB処方薬Excelファイル（都道府県別）を読み込み
-2. 精神科関連薬剤（催眠鎮静剤・抗不安剤、精神神経用剤）を抽出
-3. 年齢標準化（直接法、基準：2020年都道府県人口）
-4. 人口10万人あたり処方量を算出
-
-入力:
-- 02_Data/raw/NDB_OpenData/No.10/05_処方薬/.../【内服】外来（院外）_都道府県別薬効分類別数量.xlsx
-- 02_Data/raw/NDB_OpenData/No.10/05_処方薬/.../【内服】外来（院内）_都道府県別薬効分類別数量.xlsx
-- data/interim/psychiatric_drug_codes.csv（薬効分類コード）
-
-出力:
-- data/interim/psychiatric_prescriptions.csv（N=47都道府県）
+精神科薬剤（催眠鎮静剤・抗不安剤、精神神経用剤）の都道府県別処方量算出
+------------------------------------------------------------
 """
 
 import pandas as pd

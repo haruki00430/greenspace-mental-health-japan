@@ -1,28 +1,39 @@
 # -*- coding: utf-8 -*-
 """
+Script 07: Spatial Regression Analysis
+=======================================
+Fits OLS, Spatial Lag (SLM), Spatial Error (SEM), and Spatial Durbin (SDM)
+models to evaluate whether prefecture-level greenspace ratio predicts
+psychiatric medication prescription rates across 47 Japanese prefectures.
+
+Model specification:
+  prescription_per_100k ~ total_greenspace_ratio_percent
+                        + aging_rate + unemployment_rate
+                        + income_per_capita + single_household_rate
+                        + psych_clinic_density
+
+Steps:
+  1. OLS regression (baseline)
+  2. Spatial diagnostics (Lagrange Multiplier tests)
+  3. Spatial Lag Model (SLM / SAR)
+  4. Spatial Error Model (SEM)
+  5. Spatial Durbin Model (SDM)
+  6. Model comparison (AIC, log-likelihood, Pseudo-R²)
+
+Inputs:
+  - data/processed/spatial_analysis_data.geojson  (includes LISA results)
+
+Outputs:
+  - results/regression_results.txt        (regression summary)
+  - results/model_comparison.csv          (AIC / R² comparison table)
+  - results/figures/residual_plot_ols.png
+  - results/figures/residual_plot_slm.png
+  - results/figures/coefficients_comparison.png
+
+------------------------------------------------------------
 スクリプト07: 空間回帰分析
-
-Phase 3の内容：
-1. OLS回帰（ベースライン）
-2. 空間診断（Lagrange Multiplier tests）
-3. Spatial Lag Model (SLM)
-4. Spatial Error Model (SEM)
-5. Spatial Durbin Model (SDM)
-6. モデル比較（AIC, Log-likelihood, Pseudo-R²）
-
-モデル式:
-prescription_per_100k ~ total_greenspace_ratio_percent + aging_rate + unemployment_rate +
-                        income_per_capita + single_household_rate + psych_clinic_density
-
-入力:
-- data/processed/spatial_analysis_data.geojson（LISAデータ含む）
-
-出力:
-- results/regression_results.txt（回帰結果）
-- results/model_comparison.csv（モデル比較表）
-- results/figures/residual_plot_ols.png（OLS残差プロット）
-- results/figures/residual_plot_slm.png（SLM残差プロット）
-- results/figures/coefficients_comparison.png（係数比較図）
+Phase 3 — OLS / SLM / SEM / SDM モデル比較
+------------------------------------------------------------
 """
 
 import pandas as pd

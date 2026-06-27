@@ -1,29 +1,33 @@
 # -*- coding: utf-8 -*-
 """
+Script 04: Integrate Socioeconomic and Healthcare Covariates
+=============================================================
+Assembles prefecture-level adjustment variables from e-Stat (Statistics
+Bureau of Japan) and Japan Meteorological Agency for inclusion in the
+spatial regression model.
+
+Covariates:
+  - Aging rate (% population aged ≥65)
+  - Unemployment rate (%)
+  - Single-person household rate (%)
+  - College graduation rate (%)
+  - Per-capita taxable income (10,000 JPY)
+  - Psychiatric clinic density (facilities per 100,000 population)
+  - Psychiatric physician density (persons per 100,000 population)
+  - Annual sunshine hours (h)
+
+Inputs:
+  - e-Stat data (Population Census, Medical Facility Survey) — manual download
+    https://www.e-stat.go.jp/
+  - Japan Meteorological Agency climate data — manual download
+
+Outputs:
+  - data/interim/socioeconomic_data.csv  (N = 47 prefectures)
+
+------------------------------------------------------------
 調整変数データ統合スクリプト
-
-機能:
-1. e-Stat（国勢調査）から社会経済指標を取得
-2. e-Stat（医療施設調査）から精神科診療所密度を取得
-3. 気象庁データから年間日照時間を取得
-4. 都道府県別に統合してCSV保存
-
-調整変数:
-- 失業率（%）
-- 単独世帯率（%）
-- 大学卒業率（%）
-- 1人あたり課税対象所得（万円）
-- 精神科診療所密度（施設数/10万人）
-- 精神科医師密度（人数/10万人）
-- 年間日照時間（時間）
-- 高齢化率（%）※人口統計から算出
-
-入力:
-- 手動ダウンロードまたはAPIから取得するe-Statデータ
-- 気象庁データ（手動ダウンロード）
-
-出力:
-- data/interim/socioeconomic_data.csv（N=47都道府県）
+e-Stat・気象庁データから都道府県別共変量を統合
+------------------------------------------------------------
 """
 
 import pandas as pd

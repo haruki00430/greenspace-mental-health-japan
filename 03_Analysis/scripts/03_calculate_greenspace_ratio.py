@@ -1,19 +1,27 @@
 # -*- coding: utf-8 -*-
 """
+Script 03: Calculate Prefecture-Level Greenspace Ratio
+=======================================================
+Computes the percentage of forest and park area (greenspace ratio) for
+each of the 47 Japanese prefectures using the MLIT National Land Numerical
+Information land-use mesh data (L03-b).
+
+Formula: greenspace_ratio (%) = (forest + park area) / total area × 100
+
+Inputs:
+  - data/raw/L03_b_Land_Use_All/*.zip  (MLIT land-use mesh data, 185 files)
+  - Prefecture polygon GeoJSON (derived from MLIT A38 medical area data)
+
+Outputs:
+  - data/interim/greenspace_ratio.csv  (N = 47 prefectures)
+
+Data source: National Land Numerical Information (MLIT)
+  https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b.html
+
+------------------------------------------------------------
 緑地率計算スクリプト
-
-機能:
-1. L03-b土地利用メッシュデータ（複数年度統合版）を読み込み
-2. 都道府県ポリゴンデータ（A38から作成）を読み込み
-3. 都道府県別に緑地率を計算: (森林+公園面積) / 総面積 × 100
-4. 結果をCSVとして保存
-
-入力:
-- data/raw/L03_b_Land_Use_All/*.zip（185ファイル）
-- 02_Data/raw/A38_Medical_Area/*.geojson（二次医療圏データ）
-
-出力:
-- data/interim/greenspace_ratio.csv（N=47都道府県）
+都道府県別緑地率（森林+公園 / 総面積 × 100）の算出
+------------------------------------------------------------
 """
 
 import geopandas as gpd

@@ -1,31 +1,37 @@
 # -*- coding: utf-8 -*-
 """
+Script 08: Sensitivity and Stratified Analyses
+===============================================
+Evaluates robustness of main findings from Script 07 through multiple
+sensitivity specifications and urban/rural stratified analyses.
+
+Steps:
+  1. Sensitivity analyses
+       - Outlier diagnostics (residual plots, Cook's D)
+       - Exclusion of geographically isolated prefectures (Hokkaido, Okinawa)
+       - Identification of high-influence observations
+  2. Stratified analyses
+       - Urban vs. rural (split at median population density)
+       - High vs. low aging rate (split at median)
+       - High vs. low education level (split at median college rate)
+  3. Interaction analyses
+       - greenspace × aging_rate
+       - greenspace × population density
+
+Inputs:
+  - data/processed/spatial_analysis_data.geojson
+
+Outputs:
+  - results/sensitivity_analysis_results.txt
+  - results/stratified_analysis_results.txt
+  - results/figures/residual_diagnostics.png
+  - results/figures/stratified_coefficients.png
+  - results/figures/interaction_plot.png
+
+------------------------------------------------------------
 スクリプト08: 感度分析と層別解析
-
-内容：
-1. 感度分析
-   - 外れ値診断（残差プロット、Cook's D）
-   - 孤島除外分析（北海道・沖縄を除く）
-   - 影響力の大きい都道府県の特定
-
-2. 層別解析
-   - 都市/農村（人口密度の中央値で層別）
-   - 高齢化進行度（高齢化率の中央値で層別）
-   - 教育水準（大卒率の中央値で層別）
-
-3. 交互作用分析
-   - greenspace × aging_rate
-   - greenspace × pop_density
-
-入力:
-- data/processed/spatial_analysis_data.geojson
-
-出力:
-- results/sensitivity_analysis_results.txt
-- results/stratified_analysis_results.txt
-- results/figures/residual_diagnostics.png
-- results/figures/stratified_coefficients.png
-- results/figures/interaction_plot.png
+Phase 4 — 外れ値診断・都市農村層別・交互作用検定
+------------------------------------------------------------
 """
 
 import pandas as pd

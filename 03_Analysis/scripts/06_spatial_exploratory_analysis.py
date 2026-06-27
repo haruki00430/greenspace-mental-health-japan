@@ -1,24 +1,33 @@
 # -*- coding: utf-8 -*-
 """
+Script 06: Spatial Exploratory Analysis
+=======================================
+Computes spatial autocorrelation statistics and generates choropleth and
+LISA (Local Indicators of Spatial Association) maps for the
+greenspace-prescription ecological study (N = 47 Japanese prefectures).
+
+Steps:
+  1. Build Queen contiguity spatial weights matrix
+  2. Calculate Global Moran's I for greenspace ratio and prescription rate
+  3. Calculate Local Moran's I (LISA) — cluster/outlier detection
+  4. Generate choropleth maps (greenspace ratio, prescription rate)
+  5. Generate LISA cluster map (prescription rate)
+
+Inputs:
+  - data/processed/analysis_dataset_per100k.csv
+  - Prefecture polygon GeoJSON (N03-20240101_prefecture.geojson)
+
+Outputs:
+  - results/spatial_weights.gal        (spatial weights matrix)
+  - results/morans_i_results.txt       (Moran's I statistics)
+  - results/figures/choropleth_greenspace.png
+  - results/figures/choropleth_prescription.png
+  - results/figures/lisa_map_prescription.png
+
+------------------------------------------------------------
 スクリプト06: 空間的探索的分析
-
-Phase 2bの内容：
-1. 空間重み行列の構築（Queen contiguity）
-2. Global Moran's I 計算（空間的自己相関の検定）
-3. Local Moran's I 計算（LISA: Local Indicators of Spatial Association）
-4. Choropleth map（段階区分図）の作成
-5. LISA マップの作成
-
-入力:
-- data/processed/analysis_dataset_per100k.csv
-- 都道府県ポリゴンデータ（N03-20240101_prefecture.geojson）
-
-出力:
-- results/spatial_weights.gal（空間重み行列）
-- results/morans_i_results.txt（Moran's I 結果）
-- results/figures/choropleth_greenspace.png
-- results/figures/choropleth_prescription.png
-- results/figures/lisa_map_prescription.png
+Phase 2b — 空間重み行列・Moran's I・LISAマップ
+------------------------------------------------------------
 """
 
 import pandas as pd

@@ -13,12 +13,9 @@ from esda.moran import Moran_Local
 import sys
 import os
 
-# Add ndb_library to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', '..', '..', 'src'))
-from ndb_library.viz import set_japanese_font
-
-# Set Japanese font
-set_japanese_font()
+# Manuscript figures use English labels for international submission.
+plt.rcParams["font.family"] = "sans-serif"
+plt.rcParams["font.sans-serif"] = ["Arial", "DejaVu Sans", "Helvetica"]
 
 # Paths
 PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..', '..')
@@ -56,10 +53,10 @@ gdf.plot(
     ax=ax,
     edgecolor='black',
     linewidth=0.5,
-    legend_kwds={'label': '緑地率 (%)', 'orientation': 'horizontal', 'shrink': 0.8}
+    legend_kwds={'label': 'Greenspace ratio (%)', 'orientation': 'horizontal', 'shrink': 0.8}
 )
 
-ax.set_title('都道府県別緑地率', fontsize=16, fontweight='bold', pad=20)
+ax.set_title('Greenspace Ratio by Prefecture', fontsize=16, fontweight='bold', pad=20)
 ax.axis('off')
 
 plt.tight_layout()
@@ -81,10 +78,19 @@ gdf.plot(
     ax=ax,
     edgecolor='black',
     linewidth=0.5,
-    legend_kwds={'label': '精神科薬処方量（人口10万人あたり）', 'orientation': 'horizontal', 'shrink': 0.8}
+    legend_kwds={
+        'label': 'Psychiatric medication prescriptions (per 100,000 population)',
+        'orientation': 'horizontal',
+        'shrink': 0.8,
+    }
 )
 
-ax.set_title('都道府県別精神科薬処方量（人口10万人あたり）', fontsize=16, fontweight='bold', pad=20)
+ax.set_title(
+    'Psychiatric Medication Prescriptions by Prefecture\n(per 100,000 population)',
+    fontsize=16,
+    fontweight='bold',
+    pad=20,
+)
 ax.axis('off')
 
 plt.tight_layout()
@@ -112,11 +118,11 @@ hotspot = sig * lisa.q
 
 # Create labels
 labels = {
-    0: '有意差なし',
-    1: 'High-High (ホットスポット)',
-    2: 'Low-Low (コールドスポット)',
-    3: 'Low-High (外れ値)',
-    4: 'High-Low (外れ値)'
+    0: 'Not significant',
+    1: 'High-High (hot spot)',
+    2: 'Low-Low (cold spot)',
+    3: 'Low-High (outlier)',
+    4: 'High-Low (outlier)',
 }
 
 # Map colors
@@ -144,12 +150,23 @@ for category in [0, 1, 2, 3, 4]:
             label=labels[category]
         )
 
-ax.set_title('LISA Map: 精神科薬処方量の空間的集積パターン', fontsize=16, fontweight='bold', pad=20)
+ax.set_title(
+    'LISA Map: Spatial Clustering of Psychiatric Medication Prescriptions',
+    fontsize=16,
+    fontweight='bold',
+    pad=20,
+)
 ax.axis('off')
-ax.legend(loc='lower left', fontsize=10)
+legend = ax.legend(loc='lower left', fontsize=10, frameon=True, facecolor='white')
+legend.set_zorder(10)
 
 plt.tight_layout()
-plt.savefig(os.path.join(OUTPUT_DIR, 'lisa_map_prescription.png'), dpi=300, bbox_inches='tight')
+plt.savefig(
+    os.path.join(OUTPUT_DIR, 'lisa_map_prescription.png'),
+    dpi=300,
+    bbox_inches='tight',
+    bbox_extra_artists=[legend],
+)
 print(f"[OK] Saved: {os.path.join(OUTPUT_DIR, 'lisa_map_prescription.png')}")
 plt.close()
 
