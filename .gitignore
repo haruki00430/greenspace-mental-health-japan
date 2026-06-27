@@ -27,9 +27,11 @@ data/raw/
 02_Data/raw/
 
 # ===== 中間処理ファイル（再生成可能）=====
-data/interim/*.parquet
-data/interim/*.db
-data/interim/*.sqlite
+data/interim/
+# data/processed/ は N=47 集計データを公開するため除外しない
+# バックアップファイルは除外
+data/processed/*backup*
+data/processed/*_corrected.*
 
 # ===== 大容量バイナリ（GitHub 100MB 制限） =====
 *.parquet
@@ -38,10 +40,9 @@ data/interim/*.sqlite
 *.xlsx
 # *.csv は results/ の集計ファイルを公開するため除外しない
 
-# ===== 地理空間データ（大容量のため除外）=====
-# 注意: data/processed/spatial_analysis_data.geojson はすでにコミット済み
-data/raw/*.geojson
-data/interim/*.geojson
+# ===== 地理空間データ（大容量のため除外・GitHub 100MB 制限）=====
+# spatial_analysis_data.geojson は 334MB → GitHub LFS が必要なため除外
+*.geojson
 *.shp
 *.dbf
 *.shx

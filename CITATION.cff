@@ -1,0 +1,48 @@
+# Citation metadata for GitHub + Zenodo (update version/date/DOI at release)
+cff-version: 1.2.0
+message: "If you use this software or the deposited prefecture-level dataset, please cite as below."
+type: software
+title: "Not All Environmental Indicators Travel: Greenspace and Psychiatric Medication Prescriptions in Japan (Analysis Code)"
+version: 1.0.0
+date-released: 2026-06-27
+license: CC-BY-4.0
+url: "https://github.com/haruki00430/greenspace-mental-health-japan"
+repository-code: "https://github.com/haruki00430/greenspace-mental-health-japan"
+doi: 10.5281/zenodo.XXXXXXX
+abstract: >-
+  Reproducible code and prefecture-level aggregated data (N = 47) for a
+  nationwide spatial ecological study examining whether prefecture-level
+  greenspace coverage predicts psychiatric medication prescription rates in
+  Japan. Uses NDB Open Data No.10 (FY 2020), national land-use statistics,
+  and socioeconomic indicators. Best-fitting Spatial Durbin Model shows
+  greenspace ratio is not a significant predictor after adjustment.
+keywords:
+  - greenspace
+  - mental health
+  - psychiatric medication
+  - spatial epidemiology
+  - proxy validation
+  - NDB Open Data
+  - Japan
+  - ecological study
+authors:
+  - family-names: Saito
+    given-names: Haruki
+    affiliation: "Department of Epidemiology, Fukushima Medical University School of Medicine"
+    orcid: "https://orcid.org/0009-0009-7890-6068"
+  - family-names: Ohira
+    given-names: Tetsuya
+    affiliation: "Department of Epidemiology, Fukushima Medical University School of Medicine"
+    orcid: "https://orcid.org/0000-0003-4532-7165"
+preferred-citation:
+  type: article
+  title: "Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan"
+  authors:
+    - family-names: Saito
+      given-names: Haruki
+    - family-names: Ohira
+      given-names: Tetsuya
+  journal: "Community Mental Health Journal"
+  year: 2026
+  notes: "Manuscript under review; update journal volume/pages when published."
+  doi: 10.5281/zenodo.XXXXXXX

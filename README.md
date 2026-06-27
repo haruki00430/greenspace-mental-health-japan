@@ -2,7 +2,10 @@
 
 **A Nationwide Spatial Ecological Study (N = 47 Prefectures, FY 2020)**
 
+> **Reproduce · Public-data only:** [`REPRODUCE.md`](REPRODUCE.md) · [`DATA_SOURCES.md`](DATA_SOURCES.md) · [`03_Analysis/scripts/README.md`](03_Analysis/scripts/README.md) · [`docs/ZENODO_DEPOSIT_MANIFEST.md`](docs/ZENODO_DEPOSIT_MANIFEST.md) · [`CITATION.cff`](CITATION.cff)
+
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 
 > **日本語概要は下部の「概要（日本語）」セクションを参照してください。**
 
@@ -146,9 +149,10 @@ quarto render Manuscript_CMHJ.qmd --to docx
 
 ## License
 
-This repository is licensed under the [Creative Commons Attribution 4.0 International (CC-BY 4.0)](https://creativecommons.org/licenses/by/4.0/) License.
+Code and aggregate data in this repository are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).  
+See [`LICENSE`](LICENSE) (code) and [`LICENSE-DATA`](LICENSE-DATA) (prefecture-level aggregate tables).
 
-You are free to share and adapt the material for any purpose, provided appropriate credit is given.
+NDB raw Excel files are not redistributed; see [`DATA_SOURCES.md`](DATA_SOURCES.md).
 
 ---
 
@@ -157,18 +161,26 @@ You are free to share and adapt the material for any purpose, provided appropria
 If you use this code or data, please cite:
 
 ```
-Saito H, Ohira T. Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan. Community Mental Health Journal. [Submitted 2026].
+Saito H, Ohira T. Not All Environmental Indicators Travel: Lessons from Greenspace and
+Mental Health Service Use in Japan. Community Mental Health Journal. [Submitted 2026].
 ```
+
+Or use the Zenodo DOI (see [`CITATION.cff`](CITATION.cff)):  
+`https://doi.org/10.5281/zenodo.XXXXXXX` (replace with actual DOI after acceptance)
 
 ---
 
-## Contact
+## Authors / 著者
 
-**Corresponding Author:** Haruki Saito  
+**Haruki Saito** (Corresponding)  
 Department of Epidemiology, Fukushima Medical University School of Medicine  
 1 Hikarigaoka, Fukushima-shi, Fukushima 960-1295, Japan  
-Email: haruki00430@gmail.com  
-ORCID: [0009-0009-7890-6068](https://orcid.org/0009-0009-7890-6068)
+Email: haruki00430@gmail.com · ORCID: [0009-0009-7890-6068](https://orcid.org/0009-0009-7890-6068)
+
+**Tetsuya Ohira**  
+Department of Epidemiology, Fukushima Medical University School of Medicine, Fukushima, Japan  
+Radiation Medical Science Center for the Fukushima Health Management Survey, Fukushima Medical University, Fukushima, Japan  
+ORCID: [0000-0003-4532-7165](https://orcid.org/0000-0003-4532-7165)
 
 ---
 

@@ -1,0 +1,18 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Applies to files under `data/release/` only (prefecture-level aggregated tables,
+N = 47 Japanese prefectures).
+
+You are free to share and adapt these data files under the terms of CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+Attribution should cite:
+  1. The Zenodo DOI for this repository (see CITATION.cff)
+  2. The GitHub repository: https://github.com/haruki00430/greenspace-mental-health-japan
+  3. The underlying primary sources listed in DATA_SOURCES.md:
+     - MHLW NDB Open Data (prescription rates)
+     - Biodiversity Center of Japan / MLIT (greenspace ratios)
+     - e-Stat Statistics Bureau of Japan (socioeconomic covariates)
+
+Raw NDB Excel files are not redistributed and remain subject to MHLW terms.
+Individual-level claims data cannot be redistributed under any license.
