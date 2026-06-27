@@ -3,7 +3,7 @@ cff-version: 1.2.0
 message: "If you use this software or the deposited prefecture-level dataset, please cite as below."
 type: software
 title: "Not All Environmental Indicators Travel: Greenspace and Psychiatric Medication Prescriptions in Japan (Analysis Code)"
-version: 1.0.0
+version: 1.0.2
 date-released: 2026-06-27
 license: CC-BY-4.0
 url: "https://github.com/haruki00430/greenspace-mental-health-japan"
