@@ -82,7 +82,7 @@ python 03_Analysis/scripts/03_visualization.py
 CC-BY 4.0
 
 ### Zenodo DOI
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20986298.svg)](https://doi.org/10.5281/zenodo.20986298)
 ```
 
 ### 2-3. LICENSE ファイル
@@ -170,7 +170,7 @@ All data used in this study are publicly available. NDB Open Data (Ministry of H
 Labour and Welfare): https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html.
 Biodiversity Center of Japan: http://www.biodic.go.jp/. e-Stat (Statistics Bureau of
 Japan): https://www.e-stat.go.jp/. The analysis code and aggregate prefecture-level
-data (N = 47) are openly available on Zenodo at https://doi.org/10.5281/zenodo.XXXXXXX.
+data (N = 47) are openly available on Zenodo at https://doi.org/10.5281/zenodo.20986298.
 ```
 
 その後 `quarto render Manuscript_CMHJ.qmd --to docx` で最終版 DOCX を再生成。

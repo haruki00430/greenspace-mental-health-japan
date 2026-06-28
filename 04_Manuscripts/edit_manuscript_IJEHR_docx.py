@@ -110,7 +110,7 @@ DATA_AVAILABILITY = (
     "e-Stat (Statistics Bureau of Japan): https://www.e-stat.go.jp/. Analysis code and "
     "aggregate prefecture-level data (N = 47) are openly available at "
     "https://github.com/haruki00430/greenspace-mental-health-japan and "
-    "https://doi.org/10.5281/zenodo.20951145."
+    "https://doi.org/10.5281/zenodo.20986298."
 )
 
 DISCLOSURE = "The authors report there are no competing interests to declare."

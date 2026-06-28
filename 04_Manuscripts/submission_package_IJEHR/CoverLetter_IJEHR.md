@@ -35,7 +35,7 @@ We believe this manuscript aligns with the journal's focus on environmental heal
 - **Ethics:** Publicly available, de-identified, aggregate-level data only. Ethics committee approval was not required.
 - **Competing interests:** The authors report there are no competing interests.
 - **Funding:** This research received no specific grant from any funding agency.
-- **Data availability:** NDB Open Data, MLIT National Land Numerical Information, e-Stat. Code and data: https://github.com/haruki00430/greenspace-mental-health-japan and https://doi.org/10.5281/zenodo.20951145.
+- **Data availability:** NDB Open Data, MLIT National Land Numerical Information, e-Stat. Code and data: https://github.com/haruki00430/greenspace-mental-health-japan and https://doi.org/10.5281/zenodo.20986298.
 - **AI use:** AI-assisted tools were used for manuscript drafting and analysis scripting; all analyses and interpretations were verified by the authors.
 
 This manuscript was previously submitted to Community Mental Health Journal and was declined without peer review on 28 June 2026. It has not been published elsewhere and is not under consideration by any other journal.

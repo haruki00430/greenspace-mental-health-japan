@@ -184,7 +184,7 @@ def build_cover_letter_docx(path: Path) -> None:
         doc,
         "Data availability: NDB Open Data, MLIT National Land Numerical Information, e-Stat. "
         "Code and data: https://github.com/haruki00430/greenspace-mental-health-japan and "
-        "https://doi.org/10.5281/zenodo.20951145.",
+        "https://doi.org/10.5281/zenodo.20986298.",
     )
     _add_bullet(
         doc,
@@ -375,7 +375,7 @@ def build_declarations_docx(path: Path) -> None:
             "Bureau of Japan): https://www.e-stat.go.jp/. Analysis code and aggregate "
             "prefecture-level data (N = 47) are openly available at "
             "https://github.com/haruki00430/greenspace-mental-health-japan and "
-            "https://doi.org/10.5281/zenodo.20951145.",
+            "https://doi.org/10.5281/zenodo.20986298.",
         ),
         (
             "Declaration of generative AI",

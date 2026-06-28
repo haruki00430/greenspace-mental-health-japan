@@ -84,7 +84,7 @@
 - [x] **Funding** — no specific grant
 - [x] **Disclosure statement** — no competing interests
 - [x] **AI 声明** — 記載済み
-- [x] **Data availability statement** — GitHub + Zenodo DOI `10.5281/zenodo.20951145`
+- [x] **Data availability statement** — GitHub + Zenodo DOI `10.5281/zenodo.20986298`
 - [x] **Biographical note** — `Author_Bios_IJEHR_20260628.docx`
 - [x] **Ethics** — Materials and methods 内
 
@@ -131,7 +131,7 @@
 7. **Declarations（ポータル各フォーム）**
    - `Declarations_IJEHR_20260628.docx` からコピー
    - Funding / Competing interests / AI / Data availability
-   - Data set DOI: `10.5281/zenodo.20951145`
+   - Data set DOI: `10.5281/zenodo.20986298`
 
 8. **Cover letter**
    - `CoverLetter_IJEHR_20260628.docx` を貼り付け
@@ -155,7 +155,7 @@ python validate_IJEHR_limits.py
 ## 7. Data Availability（Zenodo）
 
 - GitHub: <https://github.com/haruki00430/greenspace-mental-health-japan>
-- Zenodo DOI: <https://doi.org/10.5281/zenodo.20951145> (release v1.0.2)
+- Zenodo DOI: <https://doi.org/10.5281/zenodo.20986298> (release v1.0.3)
 - 受理後にジャーナル DOI を Zenodo Related identifiers に追記
 
 ---

@@ -1,7 +1,7 @@
 # Zenodo Deposit Manifest (v1.0.3)
 
 **Record type:** Software + dataset (prefecture-level aggregate, N = 47)  
-**DOI:** *pending* — assign after Zenodo archives `v1.0.3`; concept DOI `10.5281/zenodo.20950806` (latest)  
+**DOI:** `10.5281/zenodo.20986298` (version); concept DOI `10.5281/zenodo.20950806`  
 **Previous version:** `10.5281/zenodo.20951145` (`v1.0.2`, 2026-06-27)  
 **GitHub tag:** `v1.0.3` (Zenodo archival release, 2026-06-28)  
 **License:** Code CC-BY 4.0; data CC-BY 4.0 (derived prefecture-level aggregates only)
@@ -115,7 +115,7 @@ After DOI is confirmed, update `04_Manuscripts/Manuscript_CMHJ.qmd` § Availabil
 
 ```
 The analysis code and prefecture-level aggregate data (N = 47) are openly
-available at https://doi.org/10.5281/zenodo.20951145.
+available at https://doi.org/10.5281/zenodo.20986298.
 ```
 
 Then re-render and submit final DOCX to the journal.

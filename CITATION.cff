@@ -8,7 +8,7 @@ date-released: 2026-06-28
 license: CC-BY-4.0
 url: "https://github.com/haruki00430/greenspace-mental-health-japan"
 repository-code: "https://github.com/haruki00430/greenspace-mental-health-japan"
-doi: 10.5281/zenodo.20950806
+doi: 10.5281/zenodo.20986298
 abstract: >-
   Reproducible code and prefecture-level aggregated data (N = 47) for a
   nationwide spatial ecological study examining whether prefecture-level
@@ -45,4 +45,4 @@ preferred-citation:
   journal: "International Journal of Environmental Health Research"
   year: 2026
   notes: "Submitted 2026-06-28; previously declined without peer review at Community Mental Health Journal (2026-06-28). Update volume/pages when published."
-  doi: 10.5281/zenodo.20950806
+  doi: 10.5281/zenodo.20986298
