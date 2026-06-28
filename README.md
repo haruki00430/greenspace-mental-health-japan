@@ -15,7 +15,7 @@
 
 This repository contains the analysis code and result outputs for the study:
 
-> Saito H, Ohira T. "Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan." *Community Mental Health Journal*. [Submitted 2026-06-27]
+> Saito H, Ohira T. "Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan." *International Journal of Environmental Health Research*. [Submitted 2026-06-28; previously declined without peer review at *Community Mental Health Journal*, 2026-06-28]
 
 We examined whether **prefecture-level greenspace coverage** predicts **psychiatric medication prescription rates** across all 47 Japanese prefectures using spatial ecological methods and NDB Open Data (FY 2020).
 
@@ -72,7 +72,7 @@ NDB_XXX_greenspace_mental_health/
 │       ├── 06_spatial_exploratory_analysis.py      # Step 6: Spatial autocorrelation (Moran's I, LISA)
 │       ├── 07_spatial_regression_analysis.py       # Step 7: OLS / SLM / SEM / SDM
 │       ├── 08_sensitivity_and_stratified_analysis.py  # Step 8: Sensitivity & stratified analyses
-│       └── create_figures.py                       # Figure generation (Fig. 1–3, S1–S3)
+│       └── create_figures.py                       # Figure generation (Fig. 1–3)
 ├── data/
 │   ├── raw/           # NDB raw data — NOT included (download from MHLW)
 │   ├── interim/       # Intermediate outputs
@@ -86,7 +86,8 @@ NDB_XXX_greenspace_mental_health/
 │       ├── sensitivity_analysis_results.txt
 │       └── stratified_analysis_results.txt
 ├── 04_Manuscripts/
-│   ├── Manuscript_CMHJ.qmd           # Quarto source (APA format, CMHJ submission)
+│   ├── Manuscript_IJEHR.qmd           # Quarto source (CSE format, IJEHR submission)
+│   ├── Manuscript_CMHJ.qmd           # Prior CMHJ submission source (APA)
 │   ├── references.bib                # BibTeX references
 │   └── apa.csl                       # APA 7th edition citation style
 └── docs/                             # Research protocol and progress reports
@@ -142,7 +143,7 @@ python 03_Analysis/scripts/create_figures.py
 
 ```bash
 cd 04_Manuscripts
-quarto render Manuscript_CMHJ.qmd --to docx
+quarto render Manuscript_IJEHR.qmd --to docx
 ```
 
 ---
@@ -162,7 +163,7 @@ If you use this code or data, please cite:
 
 ```
 Saito H, Ohira T. Not All Environmental Indicators Travel: Lessons from Greenspace and
-Mental Health Service Use in Japan. Community Mental Health Journal. [Submitted 2026].
+Mental Health Service Use in Japan. International Journal of Environmental Health Research. [Submitted 2026].
 ```
 
 Or use the Zenodo DOI (see [`CITATION.cff`](CITATION.cff)):  
@@ -175,7 +176,7 @@ Or use the Zenodo DOI (see [`CITATION.cff`](CITATION.cff)):
 **Haruki Saito** (Corresponding)  
 Department of Epidemiology, Fukushima Medical University School of Medicine  
 1 Hikarigaoka, Fukushima-shi, Fukushima 960-1295, Japan  
-Email: haruki00430@gmail.com · ORCID: [0009-0009-7890-6068](https://orcid.org/0009-0009-7890-6068)
+Email: m211039@fmu.ac.jp · ORCID: [0009-0009-7890-6068](https://orcid.org/0009-0009-7890-6068)
 
 **Tetsuya Ohira**  
 Department of Epidemiology, Fukushima Medical University School of Medicine, Fukushima, Japan  
@@ -215,4 +216,4 @@ ORCID: [0000-0003-4532-7165](https://orcid.org/0000-0003-4532-7165)
 
 ---
 
-*Last updated: 2026-06-27*
+*Last updated: 2026-06-28*
