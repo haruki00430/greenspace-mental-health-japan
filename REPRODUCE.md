@@ -142,7 +142,8 @@ Requires Quarto and `apa.csl` (included in repository).
 
 ## Zenodo ↔ GitHub release workflow / リリース手順
 
-**Current release (2026-06-27):** `v1.0.2` → DOI [`10.5281/zenodo.20951145`](https://doi.org/10.5281/zenodo.20951145)
+**Current release (2026-06-28):** `v1.0.3` → DOI *pending* (concept DOI [`10.5281/zenodo.20950806`](https://doi.org/10.5281/zenodo.20950806) resolves to latest)  
+**Previous release:** `v1.0.2` → DOI [`10.5281/zenodo.20951145`](https://doi.org/10.5281/zenodo.20951145)
 
 1. Ensure no secrets or raw NDB data in repository (`git status --short`)
 2. Enable **Zenodo–GitHub integration** for `haruki00430/greenspace-mental-health-japan`
@@ -171,7 +172,7 @@ If you use this repository or the Zenodo archive, cite:
 
 - **Code/software:** GitHub repository URL + Zenodo DOI (see `CITATION.cff`)
 - **Data:** MHLW NDB Open Data + MLIT + e-Stat (see `DATA_SOURCES.md`)
-- **Paper:** Saito H, Ohira T. Not All Environmental Indicators Travel. *Community Mental Health Journal*. 2026 [in review].
+- **Paper:** Saito H, Ohira T. Not All Environmental Indicators Travel. *International Journal of Environmental Health Research*. 2026 [submitted 2026-06-28].
 
 ---
 
@@ -186,4 +187,4 @@ If you use this repository or the Zenodo archive, cite:
 | `LICENSE` | CC-BY 4.0 (code and aggregated data) |
 | `LICENSE-DATA` | CC-BY 4.0 details for `data/release/` |
 
-**Last updated:** 2026-06-27
+**Last updated:** 2026-06-28

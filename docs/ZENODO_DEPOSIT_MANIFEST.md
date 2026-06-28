@@ -1,8 +1,9 @@
-# Zenodo Deposit Manifest (v1.0.2)
+# Zenodo Deposit Manifest (v1.0.3)
 
 **Record type:** Software + dataset (prefecture-level aggregate, N = 47)  
-**DOI:** `10.5281/zenodo.20951145` (version); concept DOI `10.5281/zenodo.20950806`  
-**GitHub tag:** `v1.0.2` (Zenodo archival release, 2026-06-27)  
+**DOI:** *pending* — assign after Zenodo archives `v1.0.3`; concept DOI `10.5281/zenodo.20950806` (latest)  
+**Previous version:** `10.5281/zenodo.20951145` (`v1.0.2`, 2026-06-27)  
+**GitHub tag:** `v1.0.3` (Zenodo archival release, 2026-06-28)  
 **License:** Code CC-BY 4.0; data CC-BY 4.0 (derived prefecture-level aggregates only)
 
 ---
@@ -68,9 +69,11 @@ Bundle everything needed to:
 
 | Path | Description |
 |------|-------------|
-| `04_Manuscripts/Manuscript_CMHJ.qmd` | Quarto source (APA format; anonymized for peer review) |
+| `04_Manuscripts/Manuscript_IJEHR.qmd` | Quarto source (CSE format; IJEHR submission) |
+| `04_Manuscripts/Manuscript_CMHJ.qmd` | Quarto source (APA format; prior CMHJ submission) |
 | `04_Manuscripts/references.bib` | BibTeX references |
 | `04_Manuscripts/apa.csl` | APA 7th edition citation style |
+| `04_Manuscripts/cse.csl` | CSE citation style (IJEHR) |
 
 ---
 
@@ -81,6 +84,7 @@ Bundle everything needed to:
 | `data/raw/` | NDB raw Excel (MHLW redistribution terms) |
 | `data/interim/` | Intermediate files; large; regenerable |
 | `04_Manuscripts/submission_package_CMHJ/` | Author identity info (TitlePage, CoverLetter) |
+| `04_Manuscripts/submission_package_IJEHR/` | Author identity info (TitlePage, CoverLetter, anonymous DOCX) |
 | `04_Manuscripts/*.docx` | Submission DOCXs; not required for reproduction |
 | `git_names.txt`, `git_push_error.txt` | Internal debug files |
 | `*.pyc`, `__pycache__/`, `.venv/` | Python build artifacts |
@@ -99,7 +103,7 @@ After GitHub Release triggers Zenodo archival, edit the Zenodo record:
 | **Keywords** | greenspace; mental health; psychiatric medication; spatial epidemiology; proxy validation; NDB Open Data; Japan |
 | **License** | Creative Commons Attribution 4.0 International |
 | **Communities** | `zenodo` |
-| **Related identifiers** | Published CMHJ article DOI (add after acceptance) |
+| **Related identifiers** | Published IJEHR article DOI (add after acceptance) |
 | **Method** | Spatial Durbin Model, Global Moran's I, LISA |
 | **Notes** | Prefecture-level aggregate data only (N = 47). NDB raw data not included; see DATA_SOURCES.md. |
 
@@ -118,4 +122,12 @@ Then re-render and submit final DOCX to the journal.
 
 ---
 
-*Last updated: 2026-06-27*
+## 6. v1.0.3 changelog / 変更点
+
+- Correct NDB Open Data No.10 to **FY 2023** (fiscal year 2023) in README, `CITATION.cff`, and manuscript sources
+- Add IJEHR submission package (`Manuscript_IJEHR.qmd`, `submission_package_IJEHR/`)
+- Update journal target: *International Journal of Environmental Health Research* (submitted 2026-06-28)
+
+---
+
+*Last updated: 2026-06-28*

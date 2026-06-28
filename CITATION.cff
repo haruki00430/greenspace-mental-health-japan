@@ -3,12 +3,12 @@ cff-version: 1.2.0
 message: "If you use this software or the deposited prefecture-level dataset, please cite as below."
 type: software
 title: "Not All Environmental Indicators Travel: Greenspace and Psychiatric Medication Prescriptions in Japan (Analysis Code)"
-version: 1.0.2
-date-released: 2026-06-27
+version: 1.0.3
+date-released: 2026-06-28
 license: CC-BY-4.0
 url: "https://github.com/haruki00430/greenspace-mental-health-japan"
 repository-code: "https://github.com/haruki00430/greenspace-mental-health-japan"
-doi: 10.5281/zenodo.20951145
+doi: 10.5281/zenodo.20950806
 abstract: >-
   Reproducible code and prefecture-level aggregated data (N = 47) for a
   nationwide spatial ecological study examining whether prefecture-level
@@ -45,4 +45,4 @@ preferred-citation:
   journal: "International Journal of Environmental Health Research"
   year: 2026
   notes: "Submitted 2026-06-28; previously declined without peer review at Community Mental Health Journal (2026-06-28). Update volume/pages when published."
-  doi: 10.5281/zenodo.20951145
+  doi: 10.5281/zenodo.20950806
