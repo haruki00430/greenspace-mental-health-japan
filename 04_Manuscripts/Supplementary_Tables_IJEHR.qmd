@@ -1,0 +1,50 @@
+---
+title: "Supplementary Tables — Not All Environmental Indicators Travel"
+date: "2026-06-27"
+format:
+  docx:
+    toc: false
+    number-sections: false
+---
+
+# Supplementary Material
+
+**Manuscript:** Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan
+
+**Journal:** International Journal of Environmental Health Research
+
+---
+
+## Supplementary Table S1. Pearson Correlation Matrix of Study Variables (N=47)
+
+| Variable | Prescription Rate | Greenspace Ratio | Aging Rate | Single HH Rate | Pop Density |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| Prescription Rate | 1.000 | | | | |
+| Greenspace Ratio | 0.450\*\* | 1.000 | | | |
+| Aging Rate | 0.636\*\*\* | 0.704\*\*\* | 1.000 | | |
+| Single HH Rate | 0.664\*\*\* | 0.413\*\* | 0.683\*\*\* | 1.000 | |
+| Pop Density | −0.197 | −0.615\*\*\* | −0.664\*\*\* | −0.318\* | 1.000 |
+
+\*p<0.05, \*\*p<0.01, \*\*\*p<0.001
+
+---
+
+## Supplementary Table S2. Stratified Analysis and Interaction Tests
+
+### Stratified Analysis (Separate OLS Models by Stratum)
+
+| Stratum | N | Greenspace β | SE | p-value | Interpretation |
+|---------|---|--------------|-------|---------|----------------|
+| Urban (≥median density) | 24 | 5,206 | 6,844 | 0.457 | Non-significant positive |
+| Rural (<median density) | 23 | −8,416 | 33,999 | 0.805 | Non-significant negative |
+
+### Interaction Tests (Full Sample, N=47)
+
+| Interaction Term | β | SE | t | p-value |
+|------------------|------|--------|-------------|---------|
+| Greenspace × Aging rate | 2,075 | 2,612 | 0.794 | 0.432 |
+| Greenspace × Single household rate | −8.12 | 19.52 | −0.416 | 0.678 |
+| Greenspace × Urban indicator | 389 | 24,325 | 0.016 | 0.987 |
+| Greenspace × Population density | −0.089 | 5.18 | −0.017 | 0.986 |
+
+*Note:* Urban indicator is a binary variable (1=urban, 0=rural) based on median population density.

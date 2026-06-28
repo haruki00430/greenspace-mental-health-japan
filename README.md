@@ -1,6 +1,6 @@
 # Greenspace and Psychiatric Medication Prescriptions in Japan
 
-**A Nationwide Spatial Ecological Study (N = 47 Prefectures, FY 2020)**
+**A Nationwide Spatial Ecological Study (N = 47 Prefectures, FY 2023 prescriptions)**
 
 > **Reproduce · Public-data only:** [`REPRODUCE.md`](REPRODUCE.md) · [`DATA_SOURCES.md`](DATA_SOURCES.md) · [`03_Analysis/scripts/README.md`](03_Analysis/scripts/README.md) · [`docs/ZENODO_DEPOSIT_MANIFEST.md`](docs/ZENODO_DEPOSIT_MANIFEST.md) · [`CITATION.cff`](CITATION.cff)
 
@@ -17,7 +17,7 @@ This repository contains the analysis code and result outputs for the study:
 
 > Saito H, Ohira T. "Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan." *International Journal of Environmental Health Research*. [Submitted 2026-06-28; previously declined without peer review at *Community Mental Health Journal*, 2026-06-28]
 
-We examined whether **prefecture-level greenspace coverage** predicts **psychiatric medication prescription rates** across all 47 Japanese prefectures using spatial ecological methods and NDB Open Data (FY 2020).
+We examined whether **prefecture-level greenspace coverage** predicts **psychiatric medication prescription rates** across all 47 Japanese prefectures using spatial ecological methods and NDB Open Data No.10 (FY 2023).
 
 **Key finding:** After socioeconomic and spatial adjustment, greenspace quantity was not a significant predictor of prescription volume (β = 1,326; p = 0.836 in the best-fit Spatial Durbin Model). We interpret this as a proxy-validation result: administrative greenspace area may be too coarse a proxy for the environmental pathways that actually mediate mental health outcomes.
 
@@ -42,7 +42,7 @@ We examined whether **prefecture-level greenspace coverage** predicts **psychiat
 
 | Variable | Source | Provider |
 |---------|--------|---------|
-| Psychiatric medication prescriptions | NDB Open Data No.10 (FY 2020) | Ministry of Health, Labour and Welfare |
+| Psychiatric medication prescriptions | NDB Open Data No.10 (FY 2023 / Reiwa 5) | Ministry of Health, Labour and Welfare |
 | Greenspace ratio | National Land Numerical Information (Land use) | Ministry of Land, Infrastructure, Transport and Tourism |
 | Aging rate, unemployment, income | Population census / Tax statistics | Statistics Bureau of Japan (e-Stat) |
 | Psychiatric clinic density | Medical facility survey | Ministry of Health, Labour and Welfare |
@@ -195,7 +195,7 @@ ORCID: [0000-0003-4532-7165](https://orcid.org/0000-0003-4532-7165)
 
 ### 背景・目的
 
-行政指標（面積ベースの緑地率）が精神科処方薬という健康サービス指標を予測できるかを、日本全47都道府県のNDBオープンデータ（FY2020）と空間回帰モデルを用いて検証しました。
+行政指標（面積ベースの緑地率）が精神科処方薬という健康サービス指標を予測できるかを、日本全47都道府県のNDBオープンデータ第10回（FY2023）と空間回帰モデルを用いて検証しました。
 
 ### 主要結果
 

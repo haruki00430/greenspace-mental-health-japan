@@ -13,23 +13,40 @@ format:
     toc: false
     number-sections: false
 bibliography: references.bib
-csl: apa.csl
+csl: cse.csl
 ---
 
+# Title Page
+
+**Full title:** Not All Environmental Indicators Travel: Lessons from Greenspace and Mental Health Service Use in Japan
+
+**Authors:** Haruki Saito^1,\*^ and Tetsuya Ohira^1,2^
+
+^1^ Department of Epidemiology, Fukushima Medical University School of Medicine, 1 Hikarigaoka, Fukushima-shi, Fukushima 960-1295, Japan
+
+^2^ Radiation Medical Science Center for the Fukushima Health Management Survey, Fukushima Medical University, Fukushima, Japan
+
+^\*^ **Corresponding author:** Haruki Saito. Email: m211039@fmu.ac.jp. ORCID: 0009-0009-7890-6068
+
+Tetsuya Ohira. Email: teoohira@fmu.ac.jp. ORCID: 0000-0003-4532-7165
+
+**Article type:** Research Article
+
+**Word count (main text):** see TitlePage_IJEHR document
+
+**Abstract word count:** see TitlePage_IJEHR document
+
+**Tables and figures:** 3 tables and 3 figures in main text; 2 supplementary tables
+
+**References:** 28
+
+---
 
 # Abstract
 
-Background: Environmental epidemiology often relies on administrative indicators as proxies for human exposure. Greenspace quantity is widely used as a protective environmental determinant of mental health, but area-level coverage may not capture accessibility, quality, utilization, or healthcare pathways relevant to psychiatric outcomes.
+Environmental epidemiology often relies on administrative indicators as proxies for human exposure. Greenspace quantity is widely used as a protective environmental determinant of mental health, but area-level coverage may not capture accessibility, quality, utilization, or healthcare pathways. We examined whether prefecture-level greenspace coverage predicts psychiatric medication prescriptions across all 47 Japanese prefectures using National Database (NDB) Open Data (FY 2023), national land-use statistics, and socioeconomic indicators. Spatial autocorrelation was assessed with Moran's I; ordinary least squares, spatial lag, spatial error, and Spatial Durbin models were compared. Stratified and interaction analyses tested urban-rural heterogeneity. Greenspace ratio and prescription rates showed significant spatial clustering, but after socioeconomic and spatial adjustment greenspace did not predict prescriptions (Spatial Durbin β=1,326, p=0.836). Stratified coefficients differed in direction but interaction tests showed no effect modification. Administrative greenspace quantity was a weak proxy for mental health-relevant environmental exposure; indicators should be validated against intended exposure pathways before use in ecological mental health surveillance.
 
-Objective: To examine whether prefecture-level greenspace coverage predicts psychiatric medication prescriptions across Japan and to evaluate greenspace quantity as an administrative proxy for mental health-relevant environmental exposure.
-
-Methods: We conducted a nationwide spatial ecological study of all 47 Japanese prefectures using National Database psychiatric medication prescription data, national greenspace statistics, and socioeconomic indicators. Spatial autocorrelation was evaluated using Moran's I, and ordinary least squares, spatial lag, spatial error, and Spatial Durbin models were compared. Stratified and interaction analyses examined urban-rural heterogeneity.
-
-Results: Greenspace ratio and psychiatric medication prescriptions both showed significant spatial clustering. However, after socioeconomic and spatial adjustment, prefecture-level greenspace coverage did not predict psychiatric medication prescriptions. Stratified analyses showed opposite directional patterns in urban and rural prefectures, but interaction tests provided no statistical evidence of effect modification. Findings were unchanged in sensitivity analyses.
-
-Conclusions: Administrative greenspace quantity was a weak proxy for mental health-relevant environmental exposure in this national ecological analysis. The finding does not imply that natural environments lack mental health benefits; rather, it illustrates one boundary condition for environmental indicators. Indicators should be validated against the exposure pathway they are intended to represent, including accessibility, quality, use, and links to health-service pathways.
-
-**Keywords:** Greenspace; Mental health; Psychiatric medication; Spatial epidemiology; Proxy validation; Japan
+**Keywords:** Greenspace; Mental health; Spatial epidemiology; Environmental epidemiology; Japan
 
 ---
 
@@ -45,23 +62,23 @@ This study used nationwide prefecture-level data from Japan to examine whether g
 
 ---
 
-# Methods
+# Materials and methods
 
-## 1. Study Design and Setting
+## Study design and setting
 
 We conducted a nationwide ecological study using prefecture-level data (N=47) in Japan. The unit of analysis was the administrative prefecture, the largest subnational administrative division in Japan. Prescription outcomes were measured for fiscal year 2023; socioeconomic covariates were obtained from publicly available 2020 prefecture-level statistics (see covariate list below).
 
-## 2. Data Sources
+## Data sources
 
-### Psychiatric Medication Prescriptions
+### Psychiatric medication prescriptions
 
 Prescription data were obtained from the National Database of Health Insurance Claims (NDB) Open Data No.10 (fiscal year 2023) published by the Ministry of Health, Labour and Welfare [@NDBNDBopundeta]. We extracted total quantities of psychiatric medications (hypnotics, anxiolytics, antidepressants, and related agents) and expressed them as tablets per 100,000 population using prefecture population from the 2020 Population Census as the denominator. This outcome was interpreted as a claims-based mental health service-use signal rather than individual-level psychiatric disease prevalence.
 
-### Greenspace Ratio
+### Greenspace ratio
 
 Greenspace data were obtained from the National Land Numerical Information land-use subdivided mesh dataset (L03-b) published by the Ministry of Land, Infrastructure, Transport and Tourism [@mlitL03bLandUse]. Prefecture-level forest and park areas were aggregated from 1-km mesh cells and divided by total prefecture area (km²), expressed as a percentage. Forest area included the forest land-use class; park area included parks and green space. This variable was treated as an administrative environmental proxy: it captures quantity, but not accessibility, quality, safety, biodiversity, perceived restorative value, or actual use.
 
-### Socioeconomic and Healthcare Covariates
+### Socioeconomic and healthcare covariates
 
 Covariates were obtained from the e-Stat portal (Statistics Bureau of Japan) [@HuanZheDiaoCha] and the Ministry of Health, Labour and Welfare medical facility survey:
 
@@ -74,17 +91,17 @@ Covariates were obtained from the e-Stat portal (Statistics Bureau of Japan) [@H
 
 These variables were selected *a priori* as potential confounders based on previous literature documenting associations between socioeconomic status, healthcare access, and both greenspace availability and mental health outcomes [@maasMorbidityRelatedGreen2009; @mitchellEffectExposureNatural2008].
 
-## 3. Statistical Analysis
+## Statistical analysis
 
-### Descriptive Statistics
+### Descriptive statistics
 
 We calculated means, standard deviations, medians, and interquartile ranges for all continuous variables. Normality was assessed using the Shapiro-Wilk test. Pearson correlation coefficients were computed to examine bivariate associations.
 
-### Spatial Autocorrelation
+### Spatial autocorrelation
 
 To assess whether neighboring prefectures exhibited similar values (positive spatial autocorrelation), we calculated Global Moran's I statistics for greenspace ratio, prescription rate, and socioeconomic covariates [@anselinSpatialEconometricsMethods1988a; @pfeifferSpatialAnalysisEpidemiology2008]. Spatial weights were defined using Queen contiguity (shared borders or vertices) [@cliff1981]. Statistical significance was evaluated using 999 permutations.
 
-### Spatial Regression Models
+### Spatial regression models
 
 We fitted four spatial regression models [@pfeifferSpatialAnalysisEpidemiology2008; @lesageIntroductionSpatialEconometrics2009]:
 
@@ -101,27 +118,31 @@ $$
 
 Model selection was based on Akaike Information Criterion (AIC), with lower values indicating better fit. Lagrange Multiplier (LM) tests were used to diagnose spatial dependence in OLS residuals.
 
-### Stratified Analysis and Interaction Tests
+### Stratified analysis and interaction tests
 
 To examine urban-rural heterogeneity, we conducted stratified analyses by dividing prefectures into two groups based on median population density (urban: ≥median; rural: <median). Separate OLS regressions were fitted for each stratum, focusing on the greenspace coefficient. To formally test whether the greenspace-prescription association differed by urbanization level, we estimated interaction models in the full sample including product terms: (1) Greenspace × Aging rate, (2) Greenspace × Single household rate, (3) Greenspace × Urban indicator (binary variable based on median population density), and (4) Greenspace × Population density (continuous variable). Statistical significance of interaction terms was assessed using t-tests at α=0.05.
 
-### Sensitivity Analysis
+### Sensitivity analysis
 
 We conducted two sensitivity analyses: (1) outlier diagnostics using Cook's distance and standardized residuals; (2) exclusion of island prefectures (Hokkaido and Okinawa) to assess robustness.
 
 All analyses were performed using Python 3.14 with the `libpysal`, `spreg`, `geopandas`, and `matplotlib` libraries. Statistical significance was set at α=0.05 (two-tailed).
 
-*Use of AI tools: During analysis scripting and manuscript preparation, the authors used AI-assisted coding tools (Cursor, Claude Code). All statistical analyses were implemented and verified by the authors; NDB raw data were not transmitted to AI systems. See Declarations for full AI disclosure.*
+## Ethics
+
+This study used publicly available, anonymized, aggregate-level data from government statistical databases, including the NDB Open Data (Ministry of Health, Labour and Welfare of Japan), the National Land Numerical Information land-use dataset (Ministry of Land, Infrastructure, Transport and Tourism), and e-Stat (Statistics Bureau of Japan). No individual-level data were accessed. Under applicable Japanese national guidelines, formal ethics committee review is not required for secondary research using publicly available aggregate statistics. No informed consent was required.
+
+*Use of AI tools: During analysis scripting and manuscript preparation, the authors used AI-assisted coding tools (Cursor, Claude Code). All statistical analyses were implemented and verified by the authors; NDB raw data were not transmitted to AI systems. See Declaration of generative AI below for full disclosure.*
 
 ---
 
 # Results
 
-## 1. Descriptive Statistics
+## Descriptive statistics
 
-Table 1 presents descriptive statistics for all variables across 47 prefectures. The mean psychiatric medication prescription quantity was 6,812,617 tablets per 100,000 population (SD=767,166), equivalent to approximately 68 tablets per capita per year. The mean greenspace ratio was 63.1% (SD=15.0%), ranging from 29.6% to 83.7%. Aging rate ranged from 22.6% to 36.4% (mean=31.8%, SD=3.4%). Population density varied widely, from 64 to 6,462 persons/km² (median=257, mean=650). Pearson correlations showed positive bivariate correlations between prescription rate and greenspace ratio (r=0.450, p=0.001), aging rate (r=0.636, p<0.001), and single household rate (r=0.664, p<0.001).
+Table 1 presents descriptive statistics for all variables across 47 prefectures. The mean psychiatric medication prescription quantity was 6,812,617 tablets per 100,000 population (SD=767,166), equivalent to approximately 68 tablets per capita per year. The mean greenspace ratio was 63.1% (SD=15.0%), ranging from 29.6% to 83.7%. Aging rate ranged from 22.6% to 36.4% (mean=31.8%, SD=3.4%). Population density varied widely, from 64 to 6,462 persons/km² (median=257, mean=650). Pearson correlations showed positive bivariate correlations between prescription rate and greenspace ratio (r=0.450, p=0.001), aging rate (r=0.636, p<0.001), and single household rate (r=0.664, p<0.001). The full correlation matrix is reported in Supplementary Table S1.
 
-## 2. Spatial Autocorrelation
+## Spatial autocorrelation
 
 Global Moran's I statistics indicated significant positive spatial autocorrelation for all key variables (Table 2):
 
@@ -132,17 +153,17 @@ Global Moran's I statistics indicated significant positive spatial autocorrelati
 
 These results indicated that neighboring prefectures exhibited similar values. Spatial regression models were then fitted.
 
-## 3. Spatial Regression Models
+## Spatial regression models
 
 Table 3 summarizes the results of spatial regression models. The OLS model showed R²=0.529, with significant associations for aging rate (β=193,621, p<0.001) and unemployment rate (β=401,625, p=0.041). The greenspace ratio was not statistically significant (β=1,483, p>0.05). In the spatial lag and Spatial Durbin models, greenspace remained non-significant, while model fit improved modestly in the Spatial Durbin model (AIC=1368.48).
 
-## 4. Stratified Analysis by Urban-Rural Status
+## Stratified analysis by urban-rural status
 
-Table 4 presents stratified analysis results by population density. In urban prefectures (N=24), greenspace ratio had a non-significant positive coefficient (β=5,206, p=0.457). In rural prefectures (N=23), greenspace ratio had a non-significant negative coefficient (β=−8,416, p=0.805).
+Supplementary Table S2 presents stratified analysis results by population density. In urban prefectures (N=24), greenspace ratio had a non-significant positive coefficient (β=5,206, p=0.457). In rural prefectures (N=23), greenspace ratio had a non-significant negative coefficient (β=−8,416, p=0.805).
 
 Interaction terms between greenspace and urbanization-related measures were not statistically significant. The interaction term for Greenspace × Urban indicator was β=389 (p=0.987), indicating no statistical evidence that the greenspace-prescription association differed between urban and rural prefectures.
 
-## 5. Sensitivity Analysis
+## Sensitivity analysis
 
 Outlier diagnostics identified Tokushima Prefecture as having a high standardized residual (<−2). Excluding island prefectures (Hokkaido, Okinawa) yielded consistent non-significant results (N=45, greenspace β=3,385, p=0.606). These sensitivity analyses did not change the overall null greenspace finding.
 
@@ -150,35 +171,35 @@ Outlier diagnostics identified Tokushima Prefecture as having a high standardize
 
 # Discussion
 
-## 1. Principal Findings
+## Principal findings
 
 This study should be interpreted primarily as a proxy-validation study rather than a conventional greenspace-health association study. A commonly used environmental indicator did not travel cleanly from general greenspace-health theory to prefecture-level mental health service-use data in Japan. Greenspace ratio and psychiatric medication prescriptions were both spatially clustered, and greenspace was correlated with several demographic indicators. However, after socioeconomic and spatial adjustment, greenspace quantity did not predict psychiatric medication prescription volume. Stratified analyses showed opposite directional patterns in urban and rural prefectures, but interaction tests did not support statistically meaningful effect modification.
 
-## 2. Proxy Limits, Not Evidence Against Nature
+## Proxy limits, not evidence against nature
 
 The main contribution is a measurement finding. Administrative greenspace quantity appeared to be a weak proxy for mental health-relevant environmental exposure in this ecological setting. This should not be interpreted as evidence that natural environments have no mental health benefit. Instead, it indicates that the proxy may be too coarse for the outcome and scale being studied.
 
 Greenspace ratio collapses several distinct constructs into one number: amount of green land, type of green land, accessibility, safety, maintenance, biodiversity, social use, and perceived restorative value. These constructs may point in different directions across Japanese prefectures. A heavily forested rural prefecture may have high greenspace coverage but limited daily recreational access for many residents, while a dense urban prefecture may have lower coverage but more usable parks, street greenery, or transit-accessible public spaces. In this sense, the indicator is geographically concrete but epidemiologically incomplete.
 
-## 3. Why Health-Service Outcomes Amplify the Measurement Problem
+## Why health-service outcomes amplify the measurement problem
 
 The outcome further widens the gap between proxy and construct. Psychiatric medication prescriptions are a claims-based mental health service-use signal. They reflect need, diagnosis, care-seeking, healthcare access, prescribing norms, provider supply, and treatment continuation. Therefore, the association between greenspace and prescriptions is not simply an exposure-outcome relationship; it also passes through the health system.
 
 This distinction is important for interpreting regional variation under universal health coverage. High prescription volume may indicate greater need, better access, more sustained treatment, or local prescribing practice. Low prescription volume may indicate lower need, underuse, alternative care pathways, or service constraints. A coarse environmental proxy is unlikely to predict such a composite utilization outcome unless it also captures the social and service pathways through which exposure becomes measurable health care use.
 
-## 4. Boundary Conditions for Environmental Indicators
+## Boundary conditions for environmental indicators
 
 The findings illustrate one example of how environmental indicators may lose predictive power when administrative quantity is substituted for human exposure. Greenspace quantity may be useful for urban planning, land-cover surveillance, and broad environmental comparison, but it may be less valid as a proxy for individual exposure or mental health service use at a large administrative scale. Indicators may travel poorly when the measured object is far from the lived exposure, when urban and rural meanings differ, and when the health outcome is shaped by healthcare access and utilization.
 
 This framing converts a null result into a bounded methodological lesson. The relevant question is not only whether greenspace predicts mental health outcomes in Japan, but whether an environmental indicator has been validated against the exposure pathway it is intended to represent [@nieuwenhuijsen2015; @armstrong1990; @zandbergen2008]. The present findings provide one example in which environmental quantity alone was insufficient for that task.
 
-## 5. Implications for Research and Policy
+## Implications for research and policy
 
 For research, the study supports greater use of proxy-validation designs. Future studies should test whether greenspace indicators capture the exposure pathway they are intended to represent, including accessibility, walking distance, perceived safety, maintenance, biodiversity, blue space, frequency of use, and perceived restorative experience. Linking environmental data to individual-level or smaller-area health data would help distinguish exposure validity from health-service utilization patterns.
 
 For policy, the findings caution against treating mapped greenspace coverage as a direct mental health metric. Expanding green coverage may still be valuable, but mental health-oriented environmental policy should prioritize usable, safe, equitable, and socially meaningful spaces. Administrative coverage metrics can inform planning, but they should be complemented by indicators of access, quality, use, and distribution.
 
-## 6. Strengths and Limitations
+## Strengths and limitations
 
 ### Strengths
 
@@ -189,7 +210,7 @@ For policy, the findings caution against treating mapped greenspace coverage as 
 
 ### Limitations
 
-Several limitations warrant consideration. First, this was an ecological study; prefecture-level associations cannot be translated into individual-level mental health effects [@morgensternEcologicStudiesEpidemiology1995; @robinsonEcologicalCorrelationsBehavior1950a]. Second, prescription quantity is a treatment-volume measure rather than a direct measure of diagnosed prevalence or symptom burden. Third, the greenspace ratio combined forests and parks and did not capture accessibility, quality, safety, biodiversity, blue space, perceived restorative value, or actual use. Fourth, only 47 prefectures were available, limiting statistical power for interaction testing and multivariable subgroup analysis; the prefecture scale may also introduce modifiable-areal-unit and uncertain-geographic-context concerns [@openshaw1984; @kwan2012; @flowerdew2008]. Fifth, unmeasured confounding may remain despite adjustment for available socioeconomic indicators. Finally, the cross-sectional design and temporal mismatch between environmental and claims data prevent causal inference.
+Several limitations warrant consideration. First, this was an ecological study; prefecture-level associations cannot be translated into individual-level mental health effects [@morgensternEcologicStudiesEpidemiology1995; @robinsonEcologicalCorrelationsBehavior1950a]. Second, prescription quantity is a treatment-volume measure rather than a direct measure of diagnosed prevalence or symptom burden. Third, the greenspace ratio combined forests and parks and did not capture accessibility, quality, safety, biodiversity, blue space, perceived restorative value, or actual use. Fourth, only 47 prefectures were available, limiting statistical power for interaction testing and multivariable subgroup analysis; the prefecture scale may also introduce modifiable-areal-unit and uncertain-geographic-context concerns [@openshaw1984; @kwan2012; @flowerdew2008]. Fifth, unmeasured confounding may remain despite adjustment for available socioeconomic indicators. Finally, the cross-sectional design, temporal mismatch between land-use and claims data, and alignment of fiscal year 2023 prescription outcomes with 2020 socioeconomic covariates prevent causal inference.
 
 ---
 
@@ -199,43 +220,41 @@ In this nationwide spatial ecological study, prefecture-level greenspace quantit
 
 ---
 
-# Declarations
-
-## Ethics Approval and Consent to Participate
-
-This study used publicly available, anonymized, aggregate-level data from government statistical databases, including the NDB Open Data (Ministry of Health, Labour and Welfare of Japan), the National Land Numerical Information land-use dataset (Ministry of Land, Infrastructure, Transport and Tourism), and e-Stat (Statistics Bureau of Japan). No individual-level data were accessed. Under applicable Japanese national guidelines, formal ethics committee review is not required for secondary research using publicly available aggregate statistics. No informed consent was required.
-
-## Consent for Publication
-
-Not applicable.
-
-## Availability of Data and Materials
-
-All data used in this study are publicly available. NDB Open Data (Ministry of Health, Labour and Welfare): <https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html>. National Land Numerical Information L03-b land-use data (Ministry of Land, Infrastructure, Transport and Tourism): <https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b.html>. e-Stat (Statistics Bureau of Japan): <https://www.e-stat.go.jp/>. Analysis code and aggregate prefecture-level data (N = 47) are openly available at <https://github.com/haruki00430/greenspace-mental-health-japan> and <https://doi.org/10.5281/zenodo.20951145>.
-
-## Competing Interests
-
-The authors declare no competing interests.
-
-## Funding
-
-This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
-
-## Authors' Contributions
-
-Author 1: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Visualization, Writing – original draft, Writing – review and editing.
-
-Author 2: Conceptualization, Supervision, Writing – review and editing.
-
-All authors read and approved the final manuscript.
-
-## Acknowledgements
+# Acknowledgements
 
 We thank the Ministry of Health, Labour and Welfare for providing access to the National Database of Health Insurance Claims (NDB) Open Data, and the Ministry of Land, Infrastructure, Transport and Tourism for providing land-use data used to construct greenspace indicators.
 
 ---
 
-# Declaration of Generative AI and AI-Assisted Technologies in the Manuscript Preparation Process
+# Disclosure statement
+
+The authors report there are no competing interests to declare.
+
+---
+
+# Funding
+
+This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+---
+
+# Authors' contributions
+
+Haruki Saito: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Visualization, Writing – original draft, Writing – review and editing.
+
+Tetsuya Ohira: Conceptualization, Supervision, Writing – review and editing.
+
+All authors read and approved the final manuscript.
+
+---
+
+# Data availability statement
+
+All data used in this study are publicly available. NDB Open Data (Ministry of Health, Labour and Welfare): <https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html>. National Land Numerical Information L03-b land-use data (Ministry of Land, Infrastructure, Transport and Tourism): <https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L03-b.html>. e-Stat (Statistics Bureau of Japan): <https://www.e-stat.go.jp/>. Analysis code and aggregate prefecture-level data (N = 47) are openly available at <https://github.com/haruki00430/greenspace-mental-health-japan> and <https://doi.org/10.5281/zenodo.20951145>.
+
+---
+
+# Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
 
 During the preparation and writing of this work, the authors used AI-assisted tools to support manuscript drafting and statistical analysis scripting. Cursor 3.0 (Anysphere) and Google Antigravity (Google) were used for AI-assisted writing and Python code development. Large language models used through these platforms included Claude Sonnet 4.6 and Claude Opus 4.8 (Anthropic) and Gemini 3 Pro (Google). These tools were used only for text drafting and code generation; no generative AI or AI-assisted tools were used to create, alter, or otherwise process any figures, images, or artwork in this manuscript. The authors reviewed and edited all AI-assisted outputs and were responsible for the study design, selection of statistical methods, interpretation of findings, conclusions, and final reference list. The authors take full responsibility for the integrity and accuracy of the final content. AI was not listed as an author.
 
@@ -290,42 +309,6 @@ During the preparation and writing of this work, the authors used AI-assisted to
 | Spatial parameter | — | ρ=−0.105 | ρ=0.245 |
 
 †p<0.10, \*p<0.05, \*\*p<0.01, \*\*\*p<0.001
-
----
-
-## Table 4. Pearson Correlation Matrix of Study Variables (N=47)
-
-| Variable | Prescription Rate | Greenspace Ratio | Aging Rate | Single HH Rate | Pop Density |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| Prescription Rate | 1.000 | | | | |
-| Greenspace Ratio | 0.450\*\* | 1.000 | | | |
-| Aging Rate | 0.636\*\*\* | 0.704\*\*\* | 1.000 | | |
-| Single HH Rate | 0.664\*\*\* | 0.413\*\* | 0.683\*\*\* | 1.000 | |
-| Pop Density | −0.197 | −0.615\*\*\* | −0.664\*\*\* | −0.318\* | 1.000 |
-
-\*p<0.05, \*\*p<0.01, \*\*\*p<0.001
-
----
-
-## Table 5. Stratified Analysis and Interaction Tests
-
-### Stratified Analysis (Separate OLS Models by Stratum)
-
-| Stratum | N | Greenspace β | SE | p-value | Interpretation |
-|---------|---|--------------|-------|---------|----------------|
-| Urban (≥median density) | 24 | 5,206 | 6,844 | 0.457 | Non-significant positive |
-| Rural (<median density) | 23 | −8,416 | 33,999 | 0.805 | Non-significant negative |
-
-### Interaction Tests (Full Sample, N=47)
-
-| Interaction Term | β | SE | t | p-value |
-|------------------|------|--------|-------------|---------|
-| Greenspace × Aging rate | 2,075 | 2,612 | 0.794 | 0.432 |
-| Greenspace × Single household rate | −8.12 | 19.52 | −0.416 | 0.678 |
-| Greenspace × Urban indicator | 389 | 24,325 | 0.016 | 0.987 |
-| Greenspace × Population density | −0.089 | 5.18 | −0.017 | 0.986 |
-
-*Note:* Urban indicator is a binary variable (1=urban, 0=rural) based on median population density.
 
 ---
 

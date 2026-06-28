@@ -14,7 +14,7 @@ All primary inputs are **publicly available** administrative or geospatial open 
 |------|---------|
 | Provider | Ministry of Health, Labour and Welfare (MHLW) / 厚生労働省 |
 | Portal | https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html |
-| Round used | **第10回 NDB オープンデータ**（FY 2020 / 令和2年度） |
+| Round used | **第10回 NDB オープンデータ**（FY 2023 / 令和5年度） |
 | Format | Excel (`.xlsx`) |
 | Redistribution | **Authors cannot redistribute raw files**; users must download from the portal |
 
@@ -27,7 +27,7 @@ All primary inputs are **publicly available** administrative or geospatial open 
 | Files | 【内服】外来（院外）_都道府県別薬効分類別数量.xlsx / 【内服】外来（院内）_都道府県別薬効分類別数量.xlsx |
 | Drug classes | 催眠鎮静剤・抗不安剤（薬効コード 112）、精神神経用剤（薬効コード 117） |
 | Unit | Prefecture × drug classification (aggregated volumes, DDD) |
-| Manuscript use | Psychiatric medication prescription rate per 100,000 population (FY 2020) |
+| Manuscript use | Psychiatric medication prescription rate per 100,000 population (FY 2023; denominator: Population Census 2020) |
 
 **Rate calculation:**  
 `(sum of relevant prescription volumes) / (prefecture population) × 100,000`
@@ -110,4 +110,4 @@ All primary inputs are **publicly available** administrative or geospatial open 
 
 ---
 
-*Last updated: 2026-06-27*
+*Last updated: 2026-06-28*

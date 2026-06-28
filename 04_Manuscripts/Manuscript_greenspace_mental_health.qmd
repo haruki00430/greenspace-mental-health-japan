@@ -71,13 +71,13 @@ This study aimed to: (1) examine the spatial association between greenspace rati
 
 ## 1. Study Design and Setting
 
-We conducted an ecological study using prefecture-level data (N=47) in Japan. The unit of analysis was the administrative prefecture, the largest subnational administrative division in Japan. The study period was fiscal year 2020.
+We conducted an ecological study using prefecture-level data (N=47) in Japan. The unit of analysis was the administrative prefecture, the largest subnational administrative division in Japan. Prescription outcomes were measured for fiscal year 2023; socioeconomic covariates were obtained from publicly available 2020 prefecture-level statistics.
 
 ## 2. Data Sources
 
 ### Psychiatric Medication Prescriptions
 
-Prescription data were obtained from the National Database of Health Insurance Claims (NDB) Open Data No.10 (fiscal year 2020) published by the Ministry of Health, Labour and Welfare [@mhlw2022]. We extracted total quantities of psychiatric medications (hypnotics, anxiolytics, and psychotropics for oral administration) prescribed in outpatient settings. The total quantity represents the sum of tablets and packages across all drug classes. Prescription rates per 100,000 population were calculated by dividing the total quantity by the prefecture's total population and multiplying by 100,000. This measure reflects the volume of psychiatric medications dispensed, adjusted for population size.
+Prescription data were obtained from the National Database of Health Insurance Claims (NDB) Open Data No.10 (fiscal year 2023) published by the Ministry of Health, Labour and Welfare [@mhlw2022]. We extracted total quantities of psychiatric medications (hypnotics, anxiolytics, and psychotropics for oral administration) prescribed in outpatient settings. The total quantity represents the sum of tablets and packages across all drug classes. Prescription rates per 100,000 population were calculated by dividing the total quantity by prefecture population from the 2020 Population Census and multiplying by 100,000. This measure reflects the volume of psychiatric medications dispensed, adjusted for population size.
 
 ### Greenspace Ratio
 
@@ -227,7 +227,7 @@ Several limitations warrant consideration:
 
 6. **Greenspace definition**: Our measure combined forests and parks, which may have distinct effects on mental health [@lachowycz2013]. Future studies should disaggregate greenspace types and incorporate measures of blue space (coastal and inland waters) [@gascon2017].
 
-7. **Temporal mismatch**: Greenspace data (6th-7th surveys) and prescription data (2020) were not perfectly aligned temporally.
+7. **Temporal mismatch**: Greenspace data (6th-7th surveys) and prescription data (2023) were not perfectly aligned temporally; socioeconomic covariates were from 2020 statistics.
 
 ---
 

@@ -15,7 +15,7 @@ research_design:
   study_design: "Ecological study with spatial analysis"
   analysis_unit: "二次医療圏"
   sample_size: 335  # 全国の二次医療圏数
-  study_period: "2020年度（令和2年度）"
+  study_period: "2023年度（令和5年度）処方データ；共変量は2020年統計"
 
 # データソース設定
 data_sources:

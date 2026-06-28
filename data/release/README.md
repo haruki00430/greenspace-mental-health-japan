@@ -33,7 +33,7 @@ The GeoJSON with LISA results is at:
 
 ## Data provenance
 
-- Prescription data: NDB Open Data No.10 (FY 2020) — MHLW
+- Prescription data: NDB Open Data No.10 (FY 2023) — MHLW
 - Greenspace: National Land Numerical Information L03-b — MLIT
 - Covariates: Population Census 2020, Tax statistics, Medical Facility Survey — e-Stat / MHLW
 

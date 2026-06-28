@@ -161,7 +161,7 @@ Requires Quarto and `apa.csl` (included in repository).
 | `ModuleNotFoundError: libpysal` | Run `pip install -r requirements.txt` |
 | Japanese characters garbled | Scripts use UTF-8; run `chcp 65001` on Windows or use Python 3.10+ |
 | `spatial_analysis_data.geojson` missing | Pull latest from GitHub (`git pull`) |
-| Headline β mismatch | Verify FY 2020 NDB round and same psychiatric drug classification codes |
+| Headline β mismatch | Verify FY 2023 NDB No.10 round and same psychiatric drug classification codes |
 
 ---
 

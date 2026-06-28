@@ -13,7 +13,7 @@ abstract: >-
   Reproducible code and prefecture-level aggregated data (N = 47) for a
   nationwide spatial ecological study examining whether prefecture-level
   greenspace coverage predicts psychiatric medication prescription rates in
-  Japan. Uses NDB Open Data No.10 (FY 2020), national land-use statistics,
+  Japan. Uses NDB Open Data No.10 (FY 2023), national land-use statistics,
   and socioeconomic indicators. Best-fitting Spatial Durbin Model shows
   greenspace ratio is not a significant predictor after adjustment.
 keywords:
